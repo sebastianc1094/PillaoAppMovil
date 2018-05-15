@@ -7,14 +7,79 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
     
+    <script type="text/javascript" src="js/hide.js"></script>
     <title>Pilla'o</title>
 </head>
 <body>
     <div id="init" class="initContainer">
-        <img src="./img/logo.png" class="logoContainer" />
+        <img src="./img/initScreen/logo.png" class="logoContainer" />
         <a id="btnInit" onclick="help()">
-            <img src="img/initBtn.png" class="btnInit">
+            <img src="img/initScreen/initBtn.png" class="btnInit"/>
         </a>
     </div>
+
+    <div id="helpSection1" class="help helpContainer">
+        <img src="img/helpScreen/help1.png" class="help1" />
+        <img src="img/helpScreen/help1a.png" class="help1a" />
+        <div>
+        <a id="btnNext" onclick="page2()">
+            <img src="img/helpScreen/checkBtn.png" class="btnNext" />
+        </a>
+        </div>
+    </div>
+    <div id="helpSection2" class="help helpContainer">
+        <img src="img/helpScreen/help2.png" class="help1" />
+        <img src="img/helpScreen/help2a.png" class="help1a" />
+        <div>
+            <a id="btnNext" onclick="page3()">
+                <img src="img/helpScreen/checkBtn.png" class="btnNext" />
+            </a>
+        </div>
+    </div>
+    <div id="helpSection3" class="help helpContainer">
+        <img src="img/helpScreen/help3.png" class="help1" />
+        <img src="img/helpScreen/help3a.png" class="help1a" />
+        <div>
+            <a id="btnNext" onclick="mainSection()">
+                <img src="img/helpScreen/checkBtn.png" class="btnNext" />
+            </a>
+        </div>
+    </div>
+
+    <div id="mainMenu" class="main mainContainer">
+       <img src="img/mainScreen/logoMain.png" class="logoMain">
+       <a id="regBtn" onclick="regSection()">
+            <img src="img/mainScreen/regBtn.png" class="btnMain1" >     
+       </a>
+       <a id="loginBtn" onclick="loginSection()">
+            <img src="img/mainScreen/loginBtn.png" class="btnMain2">
+       </a>
+    </div>
+
+    <div id="regForm" class="reg regContainer">
+        <img src="img/mainScreen/logoMain.png" class="logoMainReg">
+        <img src="img/regScreen/form.png" class="form">
+        <img src="img/regScreen/form.png" class="form">
+        <img src="img/regScreen/form.png" class="form">
+        <div class="termsCond">
+            <input type="checkbox" name="check" class="check">
+            <a onclick="terms()">Términos y condiciones</a>
+        </div>
+        <a id="loginBtn" onclick="loginSection()">
+            <img src="img/regScreen/regBtn.png" class="btnRegScreen">
+        </a>
+    </div>
+
+    <div id="logForm" class="login">
+
+    </div>
+
+    <div id="terms" class="terms termsContainer">
+        <div class="topnav">
+            <img src="img/mainScreen/logoMain.png" class="logoNav">
+            <a href="#news"></a>
+        </div>
+    </div>
+
 </body>
 </html>
