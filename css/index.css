@@ -27,6 +27,22 @@ body{
     display: none;
 }
 
+.option{
+    display: none;
+}
+
+.instruc{
+    display: none;
+}
+
+.weather{
+    display: none;
+}
+
+.map{
+    display: none;
+}
+
 .initContainer{
     position: absolute;
     width: 100%;
@@ -232,4 +248,187 @@ input[type=checkbox] {
     width: 20%;
     height: auto;
     margin: 8%;
+}
+
+.topnavOp {
+    overflow: hidden;
+    background-color:#266983;
+    padding: 10px;
+}
+
+.topnavIns {
+    position: fixed;
+    overflow: hidden;
+    background-color:#266983;
+    padding: 10px;
+}
+
+.op1{
+    background-color: #809CAF;
+    padding: 5%;
+}
+
+.op2{
+    background-color: #ABBAC8;
+    padding: 5%;
+}
+
+.op3{
+    background-color: #CAD2DC;
+    padding: 5%;
+}
+
+.op4{
+    background-color: #D4DBE3;
+    padding: 5%;
+}
+
+.op5{
+    background-color: #E9EDF1;
+    padding: 4.5%;
+}
+
+.optionsContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.opBtnNav{
+    margin-left: 20%;
+    width: 15%;
+    height: auto;
+}
+
+.insBtn{
+    margin-left: 20%;
+    width: 60%;
+    height: auto;
+}
+
+.mapBtn{
+    margin-left: 20%;
+    width: 40%;
+    height: auto;
+}
+
+.weBtn{
+    margin-left: 20%;
+    width: 40%;
+    height: auto;
+}
+
+.hisBtn{
+    margin-left: 20%;
+    width: 50%;
+    height: auto;
+}
+
+.logBtn{
+    margin-left: 20%;
+    width: 50%;
+    height: auto;
+}
+
+.instructionContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.insScroll{
+    width: 100%;
+    height: 100%;
+    margin-top: 0%;
+    margin-left: 0%;
+    overflow-y: scroll;
+}
+
+.imgScroll{
+    margin-top: 18%;
+    width: 100%;
+    height: auto;
+}
+
+.bottomTab{
+    position: fixed;
+    background-color:#266983;
+    bottom: 0%;
+    padding-bottom: 0%;
+    width: 100%;
+}
+
+.insTitle{
+    width: 50%;
+    height: auto;
+    margin: 2%;
+}
+
+.backArrow{
+    width: 10%;
+    margin-left: 30%;
+    margin-bottom: 3%;
+}
+
+.weatherContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.weTitle{
+    width: 30%;
+    height: auto;
+    margin: 2%;
+}
+
+.weBackArrow{
+    width: 10%;
+    margin-left: 50%;
+    margin-bottom: 4%;
+}
+
+.bottomBar{
+    position: fixed;
+    background-color:#F3B82D;
+    bottom: 10%;
+    width: 100%;
+    height: 5%;
+}
+
+.weScroll{
+    margin-top: 18%;
+    width: 100%;
+    height: auto;
+}
+
+.mapContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.mapTitle{
+    width: 35%;
+    height: auto;
+    margin: 2%;
+}
+
+.mapBackArrow{
+    width: 10%;
+    margin-left: 45%;
+    margin-bottom: 2%;
+}
+
+.bottomBarMap{
+    position: fixed;
+    background-color:#F3B82D;
+    bottom: 8%;
+    width: 100%;
+    height: 5%;
+}
+
+.mapScroll{
+    width: 100%;
+    height: auto;
 }
