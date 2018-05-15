@@ -3,13 +3,36 @@ body{
     margin-left: 0px;
 }
 
+.help{
+    display: none;
+}
+
+.main{
+    display: none;
+}
+
+.reg{
+    display: none;
+}
+
+.login{
+    display: none;
+}
+
+.terms{
+    display: none;
+}
+
+.home{
+    display: none;
+}
+
 .initContainer{
     position: absolute;
     width: 100%;
     height: 100%;
-    margin-top: 0px;
     background-size: cover;
-    background-image: url(../img/init.png);
+    background-image: url(../img/initScreen/init.png);
 }
 
 .logoContainer{
@@ -21,5 +44,192 @@ body{
 }
 
 .btnInit{
-    margin-top: 35%;
+    margin-top: 30%;
+    width: 50%;
+    height: auto;
+}
+
+.helpContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/helpScreen/helpBack.png);
+}
+
+.help1{
+    position: center;
+    margin-left: 33%;
+    margin-top: 15%;
+    width: 35%;
+    height: auto;
+}
+
+.help1a{
+    position: center;
+    margin-left: 30%;
+    margin-top: 10%;
+    width: 40%;
+    height: auto;
+}
+
+.btnNext{
+    position: center;
+    margin-top: 5%;
+    margin-left: 43%;
+    width: 15%;
+    height: auto;
+}
+
+.mainContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/mainScreen/mainBack.png);
+}
+
+.logoMain {
+    position: center;
+    margin-left: 28%;
+    margin-top: 18%;
+    width: 45%;
+    height: auto;
+}
+
+.btnMain1{
+    margin-top: 20%;
+    margin-left: 20%;
+    width: 80%;
+    height: auto;
+}
+
+.btnMain2{
+    margin-top: 20%;
+    width: 80%;
+    height: auto;
+}
+
+.regContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/regScreen/regBack.png);
+}
+
+.loginContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/regScreen/regBack.png);
+}
+.logoMainReg {
+    position: center;
+    margin-left: 28%;
+    margin-top: 10%;
+    width: 45%;
+    height: auto;
+}
+
+.form{
+    margin-top: 10%;
+    width: 70%;
+    height: auto;
+}
+
+.btnRegScreen{
+    margin-top: 2%;
+    margin-left: 52%;
+    width: 50%;
+    height: auto;
+}
+
+.btnLogScreen{
+    margin-top: 15%;
+    margin-left: 35%;
+    width: 70%;
+    height: auto;
+}
+
+.termsCond{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+input[type=checkbox] { 
+  transform: scale(1);
+}
+
+.termsContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/helpScreen/helpBack.png);
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:#266983;
+  padding: 10px;
+}
+
+.logoNav{
+    position: center;
+    margin-left: 25%;
+    margin-top: 2%;
+    width: 20%;
+    height: auto;
+}
+
+.menuBtnNav{
+    margin-left: 0px;
+    width: 15%;
+    height: auto;
+}
+
+.termsTitle{
+    position: center;
+    margin-top: 10%;
+    margin-left: 20%;
+    width: 60%;
+    height: auto;
+}
+
+.scroll{
+    width: 80%;
+    height: 50%;
+    margin-top: 5%;
+    margin-left: 10%;
+    overflow-y: scroll;
+}
+
+.homeContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/homeScreen/homeBack.png);
+}
+
+.btns{
+    flex-direction: row;
+    margin-top: 112%;
+    margin-left: 32%;
+}
+
+.camBtn{
+    margin-bottom: 6%;
+    width: 20%;
+    height: auto;
+}
+
+.galBtn{   
+    width: 20%;
+    height: auto;
+    margin: 8%;
 }
