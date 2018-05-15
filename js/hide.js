@@ -53,6 +53,17 @@ function regSection() {
     }
 }
 
+function loginSection() {
+    var mainMen = document.getElementById("mainMenu");
+    var logForm = document.getElementById("logForm");
+    if (logForm.style.display == "block") {
+        logForm.style.display = "none";
+    } else {
+        logForm.style.display = "block";
+        mainMen.style.display = "none";
+    }
+}
+
 function terms() {
     var regForm = document.getElementById("regForm");
     var terms = document.getElementById("terms");   
@@ -61,6 +72,28 @@ function terms() {
     } else {
         terms.style.display = "block";
         regForm.style.display = "none";
+    }
+}
+
+function regScreen() {
+    var terms = document.getElementById("terms");
+    var regForm = document.getElementById("regForm");   
+    if (regForm.style.display == "block") {
+        regForm.style.display = "none";
+    } else {
+        regForm.style.display = "block";
+        terms.style.display = "none";
+    }
+}
+
+function homeSection() {
+    var logForm = document.getElementById("logForm");
+    var homeSec = document.getElementById("home");      
+    if (homeSec.style.display == "block") {
+        homeSec.style.display = "none";
+    } else {
+        homeSec.style.display = "block";
+        logForm.style.display = "none";
     }
 }
 
