@@ -97,3 +97,47 @@ function homeSection() {
     }
 }
 
+function optionScreen() {
+    var homeSec = document.getElementById("home");
+    var option = document.getElementById("options");        
+    if (option.style.display == "block") {
+        option.style.display = "none";
+    } else {
+        option.style.display = "block";
+        homeSec.style.display = "none";
+    }
+}
+
+function instructionSection(){
+    var option = document.getElementById("options");
+    var instruc = document.getElementById("instruction");
+    if (instruc.style.display == "block") {
+        instruc.style.display = "none";
+    } else {
+        instruc.style.display = "block";
+        option.style.display = "none";
+    }
+}
+
+function weatherSection() {
+    var option = document.getElementById("options");
+    var we = document.getElementById("weather");
+    if (we.style.display == "block") {
+        we.style.display = "none";
+    } else {
+        we.style.display = "block";
+        option.style.display = "none";
+    }
+}
+
+function mapSection() {
+    var option = document.getElementById("options");
+    var map = document.getElementById("map");
+    if (map.style.display == "block") {
+        map.style.display = "none";
+    } else {
+        map.style.display = "block";
+        option.style.display = "none";
+    }
+}
+
