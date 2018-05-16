@@ -1,3 +1,47 @@
+
+var postImg = document.getElementById('postImg');
+
+function setOptions(srcType) {
+    var options = {
+        quality: 50,
+        // targetWidth: 300,
+        // targetHeight: 400,
+        destinationType: Camera.DestinationType.FILE_URI,
+        sourceType: srcType,
+        encodingType: Camera.EncodingType.JPEG,
+        mediaType: Camera.MediaType.PICTURE,
+        allowEdit: false,
+        destinationType: navigator.camera.DestinationType.DATA_URL,
+        // destinationType: navigator.camera.DestinationType.FILE_URI,
+        
+        correctOrientation: true  //Corrects Android orientation quirks
+    }
+    return options;
+}
+
+function openCamera() {
+
+    var srcType = Camera.PictureSourceType.CAMERA;
+    var options = setOptions(srcType);
+    
+    navigator.camera.getPicture(function cameraSuccess(imageUri) {
+
+        displayImage(imageUri);
+        postSection();    
+        // uploadImage(imageUri);
+    }, function cameraError(error) {
+        console.debug("Unable to obtain picture: " + error, "app");
+
+    }, options);
+}
+
+function displayImage(imgUri) {
+    // 'data:image/jpeg;base64,'+
+    postImg.src =  'data:image/jpeg;base64,'+imgUri;
+        
+}
+
+
 function help(){
     var helpSection1 = document.getElementById("helpSection1");
     var init = document.getElementById("init");
@@ -274,6 +318,7 @@ function mapSection() {
 }
 
 function postSection() {
+
     var home = document.getElementById("home");
     var post = document.getElementById("mainPost");
     if (post.style.display == "block") {
