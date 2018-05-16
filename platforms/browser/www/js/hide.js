@@ -19,9 +19,16 @@ function setOptions(srcType) {
     return options;
 }
 
-function openCamera() {
+function openCamera(type) {
 
-    var srcType = Camera.PictureSourceType.CAMERA;
+    if(type=='CAMERA'){
+        var srcType = Camera.PictureSourceType.CAMERA;
+    }
+
+    else if(type=='PHOTOLIBRARY'){
+        var srcType = Camera.PictureSourceType.PHOTOLIBRARY;
+    }
+
     var options = setOptions(srcType);
     
     navigator.camera.getPicture(function cameraSuccess(imageUri) {
