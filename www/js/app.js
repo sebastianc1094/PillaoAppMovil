@@ -1,7 +1,7 @@
 var postImg = document.getElementById('postImg');
 var imagesRef;
 
-
+//INICIALIZACIÓN DE FIREBASE
 // var config = {
 //     apiKey: "AIzaSyD5J7qz77-xxQ4i1eh1F_FEbYNzYl-R64M",
 //     authDomain: "loginwebfirebase.firebaseapp.com",
@@ -19,9 +19,8 @@ var config = {
     messagingSenderId: "704673374693"
   };
 
+//FUNCIONES PARA PUBLICAR DENUNCIA
 window.onload = inicializar;
-
-
 function inicializar(){
     
     firebase.initializeApp(config);
@@ -97,6 +96,7 @@ function showImages(){
     });
 }
 
+//LÓGICA DE LOS CONTENEDORES DEL INDEX PARA MOSTRAR/OCULTAR
 function help(){
     var helpSection1 = document.getElementById("helpSection1");
     var init = document.getElementById("init");
