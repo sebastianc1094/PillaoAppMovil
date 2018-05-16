@@ -43,6 +43,10 @@ body{
     display: none;
 }
 
+.post{
+    display: none;
+}
+
 .initContainer{
     position: absolute;
     width: 100%;
@@ -431,4 +435,125 @@ input[type=checkbox] {
 .mapScroll{
     width: 100%;
     height: auto;
+}
+
+.postContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.topnavPost {
+    position: fixed;
+    overflow: hidden;
+    background-color:#266983;
+    padding: 10px;
+}
+
+.backPostArr{
+    margin-left: 23%;
+    margin-bottom: 2%;
+    width: 12%;
+    height: auto;
+}
+
+.scrollPost{
+    width: 100%;
+    height: auto;
+}
+
+.postTitle{
+    width: 55%;
+    margin-top: 25%;
+    margin-left: 22%;
+}
+
+.postImg{
+    margin-top: 3%;
+    width: 100%;
+    height: auto;
+}
+
+.typeTitle{
+    width: 55%;
+    margin-top: 7%;
+    margin-left: 22%;
+}
+
+.typeBtn{
+    width: 30%;
+    height: auto;
+    margin: 2%;
+}
+
+.container{
+    margin-left: 25%;
+    margin-top: 2%;
+}
+
+.separator{
+    margin-top: 8%;
+    margin-left: 15%;
+    width: 70%;
+    height: auto;
+}
+
+.idTitle{
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 5%;
+}
+
+.idLogo{
+    width: 25%;
+    margin-top: 7%;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+.idInput{
+    font-size: 30px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid black;
+}
+
+.separator2{
+    margin-top: 8%;
+    margin-left: 15%;
+    width: 70%;
+    height: auto;
+}
+
+.gpsTitle{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 5%;
+}
+
+.gpsLogo{
+    width: 15%;
+    margin-top: 7%;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+.commentTitle{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 5%;
+}
+
+.commentLogo{
+    width: 15%;
+    margin-top: 7%;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+.sendBtn{
+    width: 40%;
+    margin-top: 10%;
+    margin-left: 50%;
 }
