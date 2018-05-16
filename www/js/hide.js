@@ -1,5 +1,8 @@
 
+
 var postImg = document.getElementById('postImg');
+var imagesRef;
+
 
 // var config = {
 //     apiKey: "AIzaSyD5J7qz77-xxQ4i1eh1F_FEbYNzYl-R64M",
@@ -18,8 +21,15 @@ var config = {
     messagingSenderId: "704673374693"
   };
 
-firebase.initializeApp(config);
+window.onload = inicializar;
 
+
+function inicializar(){
+    
+    firebase.initializeApp(config);
+    imagesRef = firebase.database().ref().child('images/');
+    showImages();
+}
 function setOptions(srcType) {
     var options = {
         quality: 50,
@@ -76,7 +86,18 @@ function uploadImage(){
     // elem.src = img;
     firebase.database().ref('images/').child(name).set({ img: postImg.src });
 }
-
+function showImages(){
+    imagesRef.on("value", function(snapshot){
+        var data = snapshot.val();
+        var result = "";
+        var num = "";
+        for(var key in data){
+            console.log( data[key]);
+            result += '<img class="postImg" src="' + data[key].img + '"/>';  
+        }
+        document.getElementById('feedScroll').innerHTML = result;
+    });
+}
 
 function help(){
     var helpSection1 = document.getElementById("helpSection1");
