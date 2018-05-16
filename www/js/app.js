@@ -1,5 +1,3 @@
-
-
 var postImg = document.getElementById('postImg');
 var imagesRef;
 
