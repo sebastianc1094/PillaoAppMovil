@@ -59,6 +59,8 @@
        <a id="loginBtn" onclick="loginSection()">
             <img src="img/mainScreen/loginBtn.png" class="btnMain2">
        </a>
+       <a onclick="loginFacebook()"><img src="img/mainScreen/fbBtn.png" class="fbBtn"></a>
+
     </div>
 
     <div id="regForm" class="reg regContainer">
@@ -66,21 +68,21 @@
         <div class="formContainer">
             <img src="img/regScreen/form.png" class="form">
             <div class="inputCont">
-                <input type="text" src="img/form.png" class="inputRegister" placeholder="Correo">
+                <input type="text" src="img/form.png" class="inputRegister" placeholder="Correo" id="mail_reg">
             </div>
         </div>
 
         <div class="formContainer">
             <img src="img/regScreen/form.png" class="form">
             <div class="inputCont">
-                <input type="text" src="img/form.png" class="inputRegister" placeholder="Contraseña">
+                <input type="password" src="img/form.png" class="inputRegister" placeholder="Contraseña" id="pass_reg">
             </div>
         </div>
 
         <div class="formContainer">
             <img src="img/regScreen/form.png" class="form">
             <div class="inputCont">
-                <input type="text" src="img/form.png" class="inputRegister" placeholder="Confirmar contraseña">
+                <input type="password" src="img/form.png" class="inputRegister" placeholder="Confirmar contraseña" id="passr_reg">
             </div>
         </div>
               
@@ -88,7 +90,7 @@
             <input type="checkbox" name="check" class="check">
             <a onclick="terms()">Términos y condiciones</a>
         </div>
-        <a id="loginBtn" onclick="">
+        <a id="loginBtn" onclick="register()">
             <img src="img/regScreen/regBtn.png" class="btnRegScreen">
         </a>
     </div>
@@ -98,17 +100,17 @@
         <div class="formContainer">
             <img src="img/regScreen/form.png" class="form">
             <div class="inputCont">
-                <input type="text" src="img/form.png" class="inputRegister" placeholder="Correo">
+                <input type="text" src="img/form.png" class="inputRegister" placeholder="Correo" id="mail_login">
             </div>
         </div>
         
         <div class="formContainer">
             <img src="img/regScreen/form.png" class="form">
             <div class="inputCont">
-                <input type="text" src="img/form.png" class="inputRegister" placeholder="Contraseña">
+                <input type="password" src="img/form.png" class="inputRegister" placeholder="Contraseña" id="pass_login">
             </div>
         </div>
-        <a id="loginBtn" onclick="homeSection()">
+        <a id="loginBtn" onclick="login()">
             <img src="img/loginScreen/loginBtn.png" class="btnLogScreen">
         </a>
     </div>
@@ -238,7 +240,7 @@
         </div>
 
         <div class="op5">
-            <a><img src="img/optionsScreen/logBtn.png" class="logBtn"></a>
+            <a onclick="logout()"><img src="img/optionsScreen/logBtn.png" class="logBtn"></a>
         </div>
     </div>
 

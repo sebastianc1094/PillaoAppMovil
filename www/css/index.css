@@ -128,7 +128,7 @@ body{
 }
 
 .btnMain2{
-    margin-top: 20%;
+    margin-top: 7%;
     width: 80%;
     height: auto;
 }
@@ -582,4 +582,10 @@ input[type=checkbox] {
     outline: 0;
     background: transparent;
     border-bottom: 2px solid black;
+}
+
+.fbBtn{
+    width: 75%;
+    margin-left: 12.5%;
+    margin-top: 5%;
 }
