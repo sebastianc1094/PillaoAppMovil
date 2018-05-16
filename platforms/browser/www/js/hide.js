@@ -1,6 +1,11 @@
 
 
 var postImg = document.getElementById('postImg');
+var direction = document.getElementById('direction');
+
+var name = (new Date()).getTime();
+var geocoder = new google.maps.Geocoder;
+var actualPosition={};
 var imagesRef;
 
 
@@ -25,7 +30,7 @@ window.onload = inicializar;
 
 
 function inicializar(){
-    
+
     firebase.initializeApp(config);
     imagesRef = firebase.database().ref().child('images/');
     showImages();
@@ -63,6 +68,7 @@ function openCamera(type) {
     navigator.camera.getPicture(function cameraSuccess(imageUri) {
 
         displayImage(imageUri);
+        getDirection();
         postSection();    
         // uploadImage(imageUri);
     }, function cameraError(error) {
@@ -77,14 +83,53 @@ function displayImage(imgUri) {
         
 }
 
+function getDirection(){
+
+    if (navigator.geolocation) {
+
+        //se utiliza la geolocation para centrar el mapa
+        navigator.geolocation.getCurrentPosition( function(position) {
+
+            geocoder.geocode({'location': new google.maps.LatLng(position.coords.latitude,position.coords.longitude)}, function(results, status) {
+                if (status === 'OK') {
+                  if (results[0]) {
+                    
+                    direction.value = results[0].formatted_address;
+                    // console.log(results[0].formatted_address);
+                    // infowindow.setContent(results[1].formatted_address);
+                  } else {
+                    window.alert('No results found');
+                  }
+                } else {
+                  window.alert('Geocoder failed due to: ' + status);
+                }
+              });
+            // actualPosition = {
+            //     lat: parseFloat(position.coords.latitude),
+            //     lng: parseFloat(position.coords.longitude)
+            // };
+                
+        }, function() {
+            // handleLocationError(true, infoWindow, map.getCenter());
+        });        
+    }
+    else {
+              
+        //   handleLocationError(false, infoWindow, map.getCenter());
+        // handleLocationError(alert('error de geolocalizacion, intente mas tarde'));     
+    }
+}
+
 function uploadImage(){
 
+
     // var uploadTask = storageRef.child('img/' + base64Image).put(base64Image);
-    var name = (new Date()).getTime();
 
     // var elem = document.getElementById('imageFile');
     // elem.src = img;
     firebase.database().ref('images/').child(name).set({ img: postImg.src });
+    // console.log(posicionActual);
+
 }
 function showImages(){
     imagesRef.on("value", function(snapshot){
@@ -92,7 +137,7 @@ function showImages(){
         var result = "";
         var num = "";
         for(var key in data){
-            console.log( data[key]);
+            // console.log( data[key]);
             result += '<img class="postImg" src="' + data[key].img + '"/>';  
         }
         document.getElementById('feedScroll').innerHTML = result;

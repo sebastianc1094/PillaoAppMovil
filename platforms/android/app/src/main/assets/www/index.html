@@ -180,8 +180,8 @@
             <img src="img/mainScreen/logoMain.png" class="logoNav">
         </div>
         <div class="btns">
-                <a onclick="postSection()"><img src="img/homeScreen/camBtn.png" class="camBtn"></a>      
-                <a><img src="img/homeScreen/galleryBtn.png" class="galBtn"></a>          
+                <a onclick="openCamera('CAMERA')"><img src="img/homeScreen/camBtn.png" class="camBtn"></a>      
+                <a onclick="openCamera('PHOTOLIBRARY')" ><img src="img/homeScreen/galleryBtn.png" class="galBtn"></a>          
         </div>
     </div>
 
@@ -295,7 +295,7 @@
 
         <div class="scrollPost">
             <img src="img/postScreen/postTitle.png" class="postTitle">
-            <img src="img/postScreen/demoImg.png" class="postImg">
+            <img src="img/postScreen/demoImg.png" class="postImg" id="postImg">
             <img src="img/postScreen/typeTitle.png" class="typeTitle">
             <div class="container">
                 <a><img src="img/postScreen/bikeBtn.png" class="typeBtn"></a>
@@ -317,7 +317,7 @@
 
             <div class="idContainer">
                 <img src="img/postScreen/gpsLogo.png" class="gpsLogo">
-                <input type="text" class="idInput" placeholder="Ingresa la ubicación">
+                <input type="text" class="idInput" id="direction" placeholder="Ingresa la ubicación">
             </div>
             <img src="img/postScreen/separator.png" class="separator">
             <img src="img/postScreen/commentTitle.png" class="commentTitle">
@@ -327,7 +327,7 @@
                 <input type="text" class="idInput" placeholder="Ingresa un comentario">
             </div>
 
-            <a><img src="img/postScreen/postBtn.png" class="sendBtn"></a>
+            <a><img src="img/postScreen/postBtn.png" onclick="uploadImage()" class="sendBtn"></a>
         </div>
     </div>
 
@@ -342,7 +342,7 @@
             </a>
         </div>
 
-        <div class="feedScroll">
+        <div class="feedScroll" id="feedScroll">
 
         </div>
 
@@ -354,7 +354,9 @@
         </div>
     </div>
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuJuIc-HOLgisMpqSlJiuc-TW3jQXWA84"></script>
     <script type="text/javascript" src="cordova.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
     <script type="text/javascript" src="js/hide.js"></script>
 </body>
 </html>
