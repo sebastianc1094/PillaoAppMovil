@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    
+   
+    <title>Pilla'o</title>
+</head>
+<body>
+    <div id="init" class="initContainer">
+        <img src="./img/initScreen/logo.png" class="logoContainer" />
+        <a id="btnInit" onclick="help()">
+            <img src="img/initScreen/initBtn.png" class="btnInit"/>
+        </a>
+    </div>
+
+    <div id="helpSection1" class="help helpContainer">
+        <img src="img/helpScreen/help1.png" class="help1" />
+        <img src="img/helpScreen/help1a.png" class="help1a" />
+        <div>
+        <a id="btnNext" onclick="page2()">
+            <img src="img/helpScreen/checkBtn.png" class="btnNext" />
+        </a>
+        </div>
+    </div>
+    <div id="helpSection2" class="help helpContainer">
+        <img src="img/helpScreen/help2.png" class="help1" />
+        <img src="img/helpScreen/help2a.png" class="help1a" />
+        <div>
+            <a id="btnNext" onclick="page3()">
+                <img src="img/helpScreen/checkBtn.png" class="btnNext" />
+            </a>
+        </div>
+    </div>
+    <div id="helpSection3" class="help helpContainer">
+        <img src="img/helpScreen/help3.png" class="help1" />
+        <img src="img/helpScreen/help3a.png" class="help1a" />
+        <div>
+            <a id="btnNext" onclick="mainSection()">
+                <img src="img/helpScreen/checkBtn.png" class="btnNext" />
+            </a>
+        </div>
+    </div>
+
+    <div id="mainMenu" class="main mainContainer">
+       <img src="img/mainScreen/logoMain.png" class="logoMain">
+       <a id="regBtn" onclick="regSection()">
+            <img src="img/mainScreen/regBtn.png" class="btnMain1" >     
+       </a>
+       <a id="loginBtn" onclick="loginSection()">
+            <img src="img/mainScreen/loginBtn.png" class="btnMain2">
+       </a>
+    </div>
+
+    <div id="regForm" class="reg regContainer">
+        <img src="img/mainScreen/logoMain.png" class="logoMainReg">
+        <img src="img/regScreen/form.png" class="form">
+        <img src="img/regScreen/form.png" class="form">
+        <img src="img/regScreen/form.png" class="form">
+        <div class="termsCond">
+            <input type="checkbox" name="check" class="check">
+            <a onclick="terms()">Términos y condiciones</a>
+        </div>
+        <a id="loginBtn" onclick="">
+            <img src="img/regScreen/regBtn.png" class="btnRegScreen">
+        </a>
+    </div>
+
+    <div id="logForm" class="login loginContainer">
+        <img src="img/mainScreen/logoMain.png" class="logoMainReg">
+        <img src="img/regScreen/form.png" class="form">
+        <img src="img/regScreen/form.png" class="form">
+        <a id="loginBtn" onclick="homeSection()">
+            <img src="img/loginScreen/loginBtn.png" class="btnLogScreen">
+        </a>
+    </div>
+
+    <div id="terms" class="terms termsContainer">
+        <div class="topnav">
+            <a onclick="regScreen()"><img src="img/menuBtn.png" class="menuBtnNav"></a>
+            <img src="img/mainScreen/logoMain.png" class="logoNav">
+        </div>
+        <img src="img/termsScreen/title.png" class="termsTitle">
+        <div class="scroll">
+            Gracias por utilizar nuestros servicios, los cuales son proporcionados a través de la iniciativa ”PILLA’O” de Medellín,
+            Colombia. Estos términos y condiciones crean un contrato entre usted y el equipo detrás de la aplicación. Mediante la utilización
+            de nuestros servicios usted está aceptando estas condiciones. Por favor, léalas detenidamente. 1. USO DE NUESTROS SERVICIOS
+            La inscripción del “USUARIO” (entiéndase también, contratista, entidad aliada, personal administrativo y contratista de la
+            entidad aliada, emprendedor, mentor, asesor), en el portal PILLA’O será considerada como la aceptación de estos Términos
+            y Condiciones. Los datos proporcionados por el emprendedor deben ser correctos, veraces y completos, por lo que el USUARIO
+            asumirá toda responsabilidad sobre la falta de veracidad o exactitud en el suministro de los datos. El uso de nuestros Servicios
+            no otorga derecho de propiedad intelectual alguno sobre nuestros Servicios o contenido al que acceda. No podrá utilizar el
+            contenido de nuestros servicios a menos que obtenga el permiso de su propietario o que ello esté permitido por ley. Estas
+            condiciones no le otorgan el derecho de utilizar marca o logotipo alguno utilizado en nuestros servicios. No elimine, oculte
+            ni modifique ningún aviso legal mostrado en nuestros servicios o junto a ellos. Nuestros servicios muestran cierto contenido
+            que no pertenece a PILLA’O. Dicho contenido es responsabilidad exclusiva de la entidad que lo pone a disposición. Podremos
+            revisar contenido para determinar si es ilegal o si infringe nuestras políticas, y podremos eliminar o rechazar la visualización
+            de contenido que razonablemente consideremos que infringe nuestras políticas o la ley. Sin embargo, esto no significa que
+            revisemos contenido, por lo que no debe suponer que lo haremos. 2. INFORMACIÓN Los datos de los usuarios que se registren
+            al portal PILLA’O serán tratados cumpliendo con las políticas de seguridad de la iniciativa en cuando a la integridad de
+            la información. Los servicios y alianzas de la iniciativa podrán tener conocimiento parcial de la información provista por
+            usuarios al momento de registrarse en la plataforma PILLA’O con la intención de activarlos, notificarlos y/o contactarlos
+            por medios electrónicos para la gestión y seguimiento de las diferentes actividades de la iniciativa. La iniciativa PILLA’O
+            no utilizará esta información para identificarlo, sólo será usada para realizar la gestión de los procesos internos y externos
+            con entidades aliadas y entidades públicas y privadas con las que la Iniciativa PILLA’O tenga contratos, alianzas y convenios,
+            las cuales hacen parte de la ejecución del programa de acompañamiento en las fases de la iniciativa. 3. CONVENIOS Y ALIANZAS
+            La iniciativa PILLA’O le permite acceder o adquirir servicios que no son propiedad dePILLA’O, como parte del proceso de acompañamiento
+            a los usuarios de la interfaz. La iniciativa PILLA’O en su proceso de mejora o cambio de la interfaz puede inhabilitar y/o
+            poner a disposición nuevos servicios según las necesidades del proceso de acompañamiento. 4. SOPORTE Y SERVICIO AL CLIENTE
+            Soporte al Cliente se refiere a todo soporte o asesoría prestada al usuario en virtud de su participación en la iniciativa
+            a través del portal. La iniciativa PILLA’O garantiza que el soporte a los usuarios, se prestará con diligencia y aptitudes
+            profesionales, teniendo presente que el tiempo de respuesta de cada petición o solicitud puede tomar hasta 15 días hábiles
+            contados a partir del día siguiente de la petición o solicitud, dependiendo de la severidad del caso según lo que indica
+            la ley Estatutaria de Derecho de Petición 1755 de 2015. 5. USO DE LA PLATAFORMA La iniciativa PILLA’O se reserva el derecho
+            a realizar la eliminación y activación de Usuarios para el uso de la plataforma a aquellos que demuestren comportamientos
+            nocivos para la comunidad de emprendimiento y/o utilicen lenguajes de carácter ofensivo en los comentarios y servicios de
+            comunicaciones que provee la plataforma. Además, la publicación de contenidos falsos a la hora de denunciar también conllevará
+            a la eliminación y/o bloqueo del usuario. El Usuario podrá utilizar la plataforma de la iniciativa PILLA’O solo de acuerdo
+            con los términos de este acuerdo. No podrá utilizar técnicas de ingeniería inversa, descompilar, desensamblar ni eludir las
+            limitaciones técnicas del servicio, salvo que la legislación aplicable lo permita a pesar de esta limitación. No podrá desactivar,
+            alterar ni, de otro modo, intentar burlar cualquier mecanismo de seguridad con la intención de conocer, alterar y/o atentar
+            contra la seguridad de la información y de los servicios que provee la iniciativa PILLA’O. Tampoco podrá subir, enviar o
+            de otra manera transmitir algún contenido que pueda resultar contrario a la ley, moral, orden público, contenido dañino,
+            abusivo, despectivo, difamatorio, vulgar, obsceno, invasivo o privado, racista, xenófobos, o cualquier comportamiento objetable.
+            No podrá subir, enviar o transmitir algún contenido sin acreditar legalmente los derechos necesarios para hacerlo (por ejemplo
+            la información al interior de una empresa, propietaria y confidencial aprendida o divulgada como parte de relaciones del
+            empleo o según los términos de acuerdos de un contrato). No podrá subir, enviar o transmitir algún material que contenga
+            virus o algún código computacional como archivos o programas diseñados para interrumpir, destruir o limitar la funcionalidad
+            de algún software, hardware o equipo de telecomunicaciones. 6. RESPONSABILIDAD DE LAS CUENTAS Los usuarios también serán
+            responsables de mantener la confidencialidad de cualquier credencial de autenticación no pública relacionada con el uso que
+            hace de los Servicios. 7. POLÍTICA DE PRIVACIDAD De conformidad a lo dispuesto en el artículo 15 y 20 de la Constitución
+            Política de Colombia y la Ley Estatutaria 1581 de 2012 se señala lo siguiente: La iniciativa PILLA’O pone en conocimiento
+            de todos quienes acceden a la interfaz, la siguiente Política de Privacidad, a fin de resguardar la seguridad, confidencialidad
+            y privacidad del usuario y/o visitante de este sitio. Estas políticas tienen por finalidad asegurar la correcta utilización
+            de la información recopilada a través de las visitas de este sitio y de sus contenidos. 7.1. SOBRE LOS DATOS RECOPILADOS.
+            PILLA’O recopila datos de los suscriptores, usuarios y/o visitantes que hagan uso de este portal, a través de dos mecanismos:
+            Mecanismos Automáticos: Son aquellos procesos informáticos realizados para generar registros de las actividades de los visitantes
+            de sitios Web y cuyo objeto es establecer patrones de actividad, navegación y audiencia, que no implican la identificación
+            personal de aquellos suscriptores, usuarios y/o visitantes que accedan a PILLA’O. PILLA’O se reserva el derecho de usar dicha
+            información general, a fin de establecer criterios que mejoren los contenidos de este sistema, en todo caso siempre disociados
+            de la persona que dejó los datos en su navegación. Mecanismos Manuales: Son requerimientos formales y expresos de información
+            a los suscriptores, usuarios y/o visitantes del portal que implican la recolección de datos personales tales como nombre,
+            apellidos, domicilio, correo electrónico, ocupación, etc. PILLA’O recopila estos datos con el objeto de mejorar la calidad
+            de información del portal y dar una mejor atención ante consultas de la ciudadanía. 7.2. SOBRE EL TRATAMIENTO DE LOS DATOS.
+            Respecto de la entrega de información recopilada por medio de los mecanismos automáticos antes señalados y, que no contengan
+            identificación personal de los suscriptores, usuarios y/o visitantes de la página, ésta podrá ser utilizada para informar
+            a entidades públicas, gubernamentales o a terceros sobre patrones de actividad, navegación, audiencia y caracterización general
+            de este sistema. Respecto de los datos personales de los usuarios, recolectados a través de mecanismos manuales u otros medios,
+            éstos serán tratados con el objeto de mejorar la calidad de información de la iniciativa y dar una mejor atención ante consultas
+            de la ciudadanía. Al aceptar las presentes Políticas de Privacidad, usted autoriza a PILLA’O para: Comunicar a otros organismos
+            del Estado u otros terceros aliados sus datos personales con el objeto de mejorar la calidad de información de la iniciativa
+            y dar una mejor atención ante consultas de la ciudadanía. Comunicar a terceros información estadística elaborada a partir
+            de los datos personales de sus usuarios, cuando de dichos datos no sea posible identificar individualmente a los titulares
+            (datos disociados), de conformidad a la Ley. Aparte de las autorizaciones establecidas anteriormente, PILLA’O mantendrá la
+            debida confidencialidad de los datos personales y no los trasmitirá a terceros, salvo cuando se deban entregar en razón de
+            un mandato legal o una orden emanada de la autoridad Judicial que así lo requiera. 7.3. DERECHOS DEL TITULAR DE LOS DATOS.
+            En todo momento, el usuario podrá ejercer los derechos otorgados por la Ley Estatutaria 1581 de 2012. 8. RESPONSABILIDAD
+            Excepto por lo que se establece expresamente en estas condiciones o en condiciones adicionales, ni PILLA’O ni sus proveedores
+            o distribuidores realizan promesa alguna específica sobre los servicios. por ejemplo, no asumimos ningún compromiso respecto
+            al contenido de los servicios, la función específica de los servicios, o su confiabilidad, disponibilidad o capacidad para
+            satisfacer sus necesidades, por lo cual proporcionamos los servicios “tal como están”. 9. AUTORIZACIÓN Los usuarios de la
+            iniciativa declaran conocer y aceptar la circunstancia relativa a que este servicio público podrá, en cualquier momento,
+            modificar todo o parte de las presentes condiciones de uso, conforme con la legislación vigente o políticas del Gobierno
+            Nacional.
+        </div>
+    </div>
+
+    <div id="home" class="home homeContainer">
+        <div class="topnav">
+            <a onclick="optionScreen()"><img src="img/menuBtn.png" class="menuBtnNav"></a>
+            <img src="img/mainScreen/logoMain.png" class="logoNav">
+        </div>
+        <div class="btns">
+                <a onclick="openCamera('CAMERA')"><img src="img/homeScreen/camBtn.png" class="camBtn"></a>      
+                <a onclick="openCamera('PHOTOLIBRARY')" ><img src="img/homeScreen/galleryBtn.png" class="galBtn"></a>          
+        </div>
+    </div>
+
+    <div id="options" class="option optionsContainer">
+        <div class="topnavOp">
+            <a onclick="homeSection3()"><img src="img/menuBtn.png" class="menuBtnNav"></a>
+            <img src="img/mainScreen/logoMain.png" class="logoNav">
+            <a onclick="postSection3()"><img src="img/homeScreen/camBtn.png" class="opBtnNav"></a>
+        </div>
+
+        <div class="op1">
+            <a onclick="instructionSection()"><img src="img/optionsScreen/insBtn.png" class="insBtn"></a>
+        </div>
+
+        <div class="op2">
+            <a onclick="mapSection()"><img src="img/optionsScreen/mapBtn.png" class="mapBtn"></a>
+        </div>
+
+        <div class="op3">
+            <a onclick="weatherSection()"><img src="img/optionsScreen/weBtn.png" class="weBtn"></a>
+        </div>
+
+        <div class="op4">
+            <a onclick="feedSection()"><img src="img/optionsScreen/hisBtn.png" class="hisBtn"></a>
+        </div>
+
+        <div class="op5">
+            <a><img src="img/optionsScreen/logBtn.png" class="logBtn"></a>
+        </div>
+    </div>
+
+    <div id="instruction" class="instruc instructionContainer">
+        <div class="topnavIns">
+            <a onclick="homeSection2()">
+                <img src="img/menuBtn.png" class="menuBtnNav">
+            </a>
+            <img src="img/mainScreen/logoMain.png" class="logoNav">
+            <a onclick="postSection2()">
+                <img src="img/homeScreen/camBtn.png" class="opBtnNav">
+            </a>
+        </div>
+        <div class="insScroll">
+            <img src="img/instrucScreen/instruction.png" class="imgScroll">
+        </div>
+        <div class="bottomTab">
+            <img src="img/instrucScreen/insTitle.png" class="insTitle">
+            <a onclick="optionScreen2()"><img src="img/instrucScreen/backArrow.png" class="backArrow"></a>
+        </div>
+    </div>
+
+    <div id="weather" class="weather weatherContainer">
+        <div class="topnavIns">
+            <a onclick="weatherSection2()">
+                <img src="img/menuBtn.png" class="menuBtnNav">
+            </a>
+            <img src="img/mainScreen/logoMain.png" class="logoNav">
+            <a onclick="weatherSection3()">
+                <img src="img/homeScreen/camBtn.png" class="opBtnNav">
+            </a>
+        </div>
+
+        <div class="insScroll">
+            <img src="img/weatherScreen/wePaper.png" class="weScroll">
+        </div>
+
+        <div class="bottomBar">
+            <a>¡Mira aquí el clima!</a>
+        </div>
+
+        <div class="bottomTab">
+            <img src="img/weatherScreen/weTitle.png" class="weTitle">
+            <a onclick="weatherSection3()"><img src="img/instrucScreen/backArrow.png" class="weBackArrow"></a>
+        </div>
+    </div>
+
+    <div id="map" class="map mapContainer">
+        <div class="topnavIns">
+            <a onclick="homeSection5()">
+                <img src="img/menuBtn.png" class="menuBtnNav">
+            </a>
+            <img src="img/mainScreen/logoMain.png" class="logoNav">
+            <a onclick="postSection4()">
+                <img src="img/homeScreen/camBtn.png" class="opBtnNav">
+            </a>
+        </div>
+
+        <div class="mapScroll">
+            <img src="img/mapScreen/mapPaper.png" class="weScroll">
+        </div>
+
+        <div class="bottomBarMap">
+            <a>¡Mira aquí el mapa!</a>
+        </div>
+
+        <div class="bottomTab">
+            <img src="img/mapScreen/mapTitle.png" class="mapTitle">
+            <a onclick="optionScreen4()"><img src="img/instrucScreen/backArrow.png" class="mapBackArrow"></a>
+        </div>
+    </div>
+
+    <div id="mainPost" class="post postContainer">
+        <div class="topnavPost">
+            <a onclick="optionScreen3()">
+                <img src="img/menuBtn.png" class="menuBtnNav">
+            </a>
+            <img src="img/mainScreen/logoMain.png" class="logoNav">
+            <a onclick="homeSection4()">
+                <img src="img/instrucScreen/backArrow.png" class="backPostArr">
+            </a>
+        </div>
+
+        <div class="scrollPost">
+            <img src="img/postScreen/postTitle.png" class="postTitle">
+            <img src="img/postScreen/demoImg.png" class="postImg" id="postImg">
+            <img src="img/postScreen/typeTitle.png" class="typeTitle">
+            <div class="container">
+                <a><img src="img/postScreen/bikeBtn.png" class="typeBtn"></a>
+                <a><img src="img/postScreen/carBtn.png" class="typeBtn"></a>
+            </div>
+            <div class="container">
+                <a><img src="img/postScreen/truckBtn.png" class="typeBtn"></a>
+                <a><img src="img/postScreen/busBtn.png" class="typeBtn"></a>
+            </div>
+            <img src="img/postScreen/separator.png" class="separator">
+            <img src="img/postScreen/idTitle.png" class="idTitle">
+
+            <div class="idContainer">
+                <img src="img/postScreen/idLogo.png" class="idLogo">
+                <input type="text" class="idInput" placeholder="Ingresa la placa">
+            </div>
+            <img src="img/postScreen/separator.png" class="separator">
+            <img src="img/postScreen/gpsTitle.png" class="gpsTitle">
+
+            <div class="idContainer">
+                <img src="img/postScreen/gpsLogo.png" class="gpsLogo">
+                <input type="text" class="idInput" placeholder="Ingresa la ubicación">
+            </div>
+            <img src="img/postScreen/separator.png" class="separator">
+            <img src="img/postScreen/commentTitle.png" class="commentTitle">
+
+            <div class="idContainer">
+                <img src="img/postScreen/commentLogo.png" class="commentLogo">
+                <input type="text" class="idInput" placeholder="Ingresa un comentario">
+            </div>
+
+            <a><img src="img/postScreen/postBtn.png" onclick="uploadImage()" class="sendBtn"></a>
+        </div>
+    </div>
+
+    <div id="feed" class="feed feedContainer">
+        <div class="topnavIns">
+            <a onclick="homeSection6()">
+                <img src="img/menuBtn.png" class="menuBtnNav">
+            </a>
+            <img src="img/mainScreen/logoMain.png" class="logoNav">
+            <a onclick="postSection5()">
+                <img src="img/homeScreen/camBtn.png" class="opBtnNav">
+            </a>
+        </div>
+
+        <div class="feedScroll" id="feedScroll">
+
+        </div>
+
+        <div class="bottomTab">
+            <img src="img/feedSection/feedTitle.png" class="mapTitle">
+            <a onclick="optionScreen5()">
+                <img src="img/instrucScreen/backArrow.png" class="mapBackArrow">
+            </a>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script type="text/javascript" src="js/hide.js"></script>
+</body>
+</html>
