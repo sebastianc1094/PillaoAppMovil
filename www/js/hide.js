@@ -1,6 +1,25 @@
 
 var postImg = document.getElementById('postImg');
 
+// var config = {
+//     apiKey: "AIzaSyD5J7qz77-xxQ4i1eh1F_FEbYNzYl-R64M",
+//     authDomain: "loginwebfirebase.firebaseapp.com",
+//     databaseURL: "https://loginwebfirebase.firebaseio.com",
+//     projectId: "loginwebfirebase",
+//     storageBucket: "loginwebfirebase.appspot.com",
+//     messagingSenderId: "246625453677"
+// };
+var config = {
+    apiKey: "AIzaSyCXQsWFsLxiBTLGXLV1AefFbNhCjO2v-vU",
+    authDomain: "prueba-764cb.firebaseapp.com",
+    databaseURL: "https://prueba-764cb.firebaseio.com",
+    projectId: "prueba-764cb",
+    storageBucket: "prueba-764cb.appspot.com",
+    messagingSenderId: "704673374693"
+  };
+
+firebase.initializeApp(config);
+
 function setOptions(srcType) {
     var options = {
         quality: 50,
@@ -46,6 +65,16 @@ function displayImage(imgUri) {
     // 'data:image/jpeg;base64,'+
     postImg.src =  'data:image/jpeg;base64,'+imgUri;
         
+}
+
+function uploadImage(){
+
+    // var uploadTask = storageRef.child('img/' + base64Image).put(base64Image);
+    var name = (new Date()).getTime();
+
+    // var elem = document.getElementById('imageFile');
+    // elem.src = img;
+    firebase.database().ref('images/').child(name).set({ img: postImg.src });
 }
 
 
