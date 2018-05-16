@@ -97,6 +97,61 @@ function homeSection() {
     }
 }
 
+function homeSection2() {
+    var instruction = document.getElementById("instruction");
+    var homeSec = document.getElementById("home");
+    if (homeSec.style.display == "block") {
+        homeSec.style.display = "none";
+    } else {
+        homeSec.style.display = "block";
+        instruction.style.display = "none";
+    }
+}
+
+function homeSection3() {
+    var options = document.getElementById("options");
+    var homeSec = document.getElementById("home");
+    if (homeSec.style.display == "block") {
+        homeSec.style.display = "none";
+    } else {
+        homeSec.style.display = "block";
+        options.style.display = "none";
+    }
+}
+
+function homeSection4() {
+    var mainPost = document.getElementById("mainPost");
+    var homeSec = document.getElementById("home");
+    if (homeSec.style.display == "block") {
+        homeSec.style.display = "none";
+    } else {
+        homeSec.style.display = "block";
+        mainPost.style.display = "none";
+    }
+}
+
+function homeSection5() {
+    var map = document.getElementById("map");
+    var homeSec = document.getElementById("home");
+    if (homeSec.style.display == "block") {
+        homeSec.style.display = "none";
+    } else {
+        homeSec.style.display = "block";
+        map.style.display = "none";
+    }
+}
+
+function homeSection6() {
+    var feed = document.getElementById("feed");
+    var homeSec = document.getElementById("home");
+    if (homeSec.style.display == "block") {
+        homeSec.style.display = "none";
+    } else {
+        homeSec.style.display = "block";
+        feed.style.display = "none";
+    }
+}
+
 function optionScreen() {
     var homeSec = document.getElementById("home");
     var option = document.getElementById("options");        
@@ -105,6 +160,50 @@ function optionScreen() {
     } else {
         option.style.display = "block";
         homeSec.style.display = "none";
+    }
+}
+
+function optionScreen2() {
+    var instruction = document.getElementById("instruction");
+    var option = document.getElementById("options");
+    if (option.style.display == "block") {
+        option.style.display = "none";
+    } else {
+        option.style.display = "block";
+        instruction.style.display = "none";
+    }
+}
+
+function optionScreen3() {
+    var mainPost = document.getElementById("mainPost");
+    var option = document.getElementById("options");
+    if (option.style.display == "block") {
+        option.style.display = "none";
+    } else {
+        option.style.display = "block";
+        mainPost.style.display = "none";
+    }
+}
+
+function optionScreen4() {
+    var map = document.getElementById("map");
+    var option = document.getElementById("options");
+    if (option.style.display == "block") {
+        option.style.display = "none";
+    } else {
+        option.style.display = "block";
+        map.style.display = "none";
+    }
+}
+
+function optionScreen5() {
+    var feed = document.getElementById("feed");
+    var option = document.getElementById("options");
+    if (option.style.display == "block") {
+        option.style.display = "none";
+    } else {
+        option.style.display = "block";
+        feed.style.display = "none";
     }
 }
 
@@ -130,6 +229,39 @@ function weatherSection() {
     }
 }
 
+function weatherSection2() {
+    var we = document.getElementById("weather");
+    var home = document.getElementById("home");
+    if (home.style.display == "block") {
+        home.style.display = "none";
+    } else {
+        home.style.display = "block";
+        we.style.display = "none";
+    }
+}
+
+function weatherSection3() {
+    var we = document.getElementById("weather");
+    var options = document.getElementById("options");
+    if (options.style.display == "block") {
+        options.style.display = "none";
+    } else {
+        options.style.display = "block";
+        we.style.display = "none";
+    }
+}
+
+function weatherSection3() {
+    var we = document.getElementById("weather");
+    var mainpost = document.getElementById("mainPost");
+    if (mainpost.style.display == "block") {
+        mainpost.style.display = "none";
+    } else {
+        mainpost.style.display = "block";
+        we.style.display = "none";
+    }
+}
+
 function mapSection() {
     var option = document.getElementById("options");
     var map = document.getElementById("map");
@@ -142,13 +274,72 @@ function mapSection() {
 }
 
 function postSection() {
-    var option = document.getElementById("options");
+    var home = document.getElementById("home");
     var post = document.getElementById("mainPost");
     if (post.style.display == "block") {
         post.style.display = "none";
     } else {
         post.style.display = "block";
-        option.style.display = "none";
+        home.style.display = "none";
     }
 }
+
+function postSection2() {
+    var instruction = document.getElementById("instruction");
+    var post = document.getElementById("mainPost");
+    if (post.style.display == "block") {
+        post.style.display = "none";
+    } else {
+        post.style.display = "block";
+        instruction.style.display = "none";
+    }
+}
+
+function postSection3() {
+    var options = document.getElementById("options");
+    var post = document.getElementById("mainPost");
+    if (post.style.display == "block") {
+        post.style.display = "none";
+    } else {
+        post.style.display = "block";
+        options.style.display = "none";
+    }
+}
+
+function postSection4() {
+    var map = document.getElementById("map");
+    var post = document.getElementById("mainPost");
+    if (post.style.display == "block") {
+        post.style.display = "none";
+    } else {
+        post.style.display = "block";
+        map.style.display = "none";
+    }
+}
+
+function postSection5() {
+    var feed = document.getElementById("feed");
+    var post = document.getElementById("mainPost");
+    if (post.style.display == "block") {
+        post.style.display = "none";
+    } else {
+        post.style.display = "block";
+        feed.style.display = "none";
+    }
+}
+
+function feedSection() {
+    var options = document.getElementById("options");
+    var feed = document.getElementById("feed");
+    if (feed.style.display == "block") {
+        feed.style.display = "none";
+    } else {
+        feed.style.display = "block";
+        options.style.display = "none";
+    }
+}
+
+
+
+
 
