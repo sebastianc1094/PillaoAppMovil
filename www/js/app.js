@@ -111,7 +111,8 @@ function getDirection(){
         });        
     }
     else {
-              
+          
+        
         //   handleLocationError(false, infoWindow, map.getCenter());
         // handleLocationError(alert('error de geolocalizacion, intente mas tarde'));     
     }
