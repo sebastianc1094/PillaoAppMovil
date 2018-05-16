@@ -9,6 +9,9 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "co.edu.upb.proyecto.pillao"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "co.edu.upb.proyecto.pillao"
     }
   },
   "dependent_plugins": {}
