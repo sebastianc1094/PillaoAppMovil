@@ -141,3 +141,14 @@ function mapSection() {
     }
 }
 
+function postSection() {
+    var option = document.getElementById("options");
+    var post = document.getElementById("mainPost");
+    if (post.style.display == "block") {
+        post.style.display = "none";
+    } else {
+        post.style.display = "block";
+        option.style.display = "none";
+    }
+}
+
