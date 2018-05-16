@@ -1,0 +1,567 @@
+body{
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.help{
+    display: none;
+}
+
+.main{
+    display: none;
+}
+
+.reg{
+    display: none;
+}
+
+.login{
+    display: none;
+}
+
+.terms{
+    display: none;
+}
+
+.home{
+    display: none;
+}
+
+.option{
+    display: none;
+}
+
+.instruc{
+    display: none;
+}
+
+.weather{
+    display: none;
+}
+
+.map{
+    display: none;
+}
+
+.post{
+    display: none;
+}
+
+.feed{
+    display: none;
+}
+.initContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/initScreen/init.png);
+}
+
+.logoContainer{
+    position: center;
+    margin-left: 25%;
+    margin-top: 60%;
+    width: 50%;
+    height: auto;
+}
+
+.btnInit{
+    margin-top: 30%;
+    width: 50%;
+    height: auto;
+}
+
+.helpContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/helpScreen/helpBack.png);
+}
+
+.help1{
+    position: center;
+    margin-left: 33%;
+    margin-top: 15%;
+    width: 35%;
+    height: auto;
+}
+
+.help1a{
+    position: center;
+    margin-left: 30%;
+    margin-top: 10%;
+    width: 40%;
+    height: auto;
+}
+
+.btnNext{
+    position: center;
+    margin-top: 5%;
+    margin-left: 43%;
+    width: 15%;
+    height: auto;
+}
+
+.mainContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/mainScreen/mainBack.png);
+}
+
+.logoMain {
+    position: center;
+    margin-left: 28%;
+    margin-top: 18%;
+    width: 45%;
+    height: auto;
+}
+
+.btnMain1{
+    margin-top: 20%;
+    margin-left: 20%;
+    width: 80%;
+    height: auto;
+}
+
+.btnMain2{
+    margin-top: 20%;
+    width: 80%;
+    height: auto;
+}
+
+.regContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/regScreen/regBack.png);
+}
+
+.loginContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/regScreen/regBack.png);
+}
+.logoMainReg {
+    position: center;
+    margin-left: 28%;
+    margin-top: 10%;
+    width: 45%;
+    height: auto;
+}
+
+.form{
+    margin-top: 10%;
+    width: 70%;
+    height: auto;
+}
+
+.btnRegScreen{
+    margin-top: 2%;
+    margin-left: 52%;
+    width: 50%;
+    height: auto;
+}
+
+.btnLogScreen{
+    margin-top: 15%;
+    margin-left: 35%;
+    width: 70%;
+    height: auto;
+}
+
+.termsCond{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+input[type=checkbox] { 
+  transform: scale(1);
+}
+
+.termsContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/helpScreen/helpBack.png);
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:#266983;
+  padding: 10px;
+}
+
+.logoNav{
+    position: center;
+    margin-left: 25%;
+    margin-top: 2%;
+    width: 20%;
+    height: auto;
+}
+
+.menuBtnNav{
+    margin-left: 0px;
+    width: 15%;
+    height: auto;
+}
+
+.termsTitle{
+    position: center;
+    margin-top: 10%;
+    margin-left: 20%;
+    width: 60%;
+    height: auto;
+}
+
+.scroll{
+    width: 80%;
+    height: 50%;
+    margin-top: 5%;
+    margin-left: 10%;
+    overflow-y: scroll;
+}
+
+.homeContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../img/homeScreen/homeBack.png);
+}
+
+.btns{
+    flex-direction: row;
+    margin-top: 112%;
+    margin-left: 32%;
+}
+
+.camBtn{
+    margin-bottom: 6%;
+    width: 20%;
+    height: auto;
+}
+
+.galBtn{   
+    width: 20%;
+    height: auto;
+    margin: 8%;
+}
+
+.topnavOp {
+    overflow: hidden;
+    background-color:#266983;
+    padding: 10px;
+}
+
+.topnavIns {
+    position: fixed;
+    overflow: hidden;
+    background-color:#266983;
+    padding: 10px;
+}
+
+.op1{
+    background-color: #809CAF;
+    padding: 5%;
+}
+
+.op2{
+    background-color: #ABBAC8;
+    padding: 5%;
+}
+
+.op3{
+    background-color: #CAD2DC;
+    padding: 5%;
+}
+
+.op4{
+    background-color: #D4DBE3;
+    padding: 5%;
+}
+
+.op5{
+    background-color: #E9EDF1;
+    padding: 4.5%;
+}
+
+.optionsContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.opBtnNav{
+    margin-left: 20%;
+    width: 15%;
+    height: auto;
+}
+
+.insBtn{
+    margin-left: 20%;
+    width: 60%;
+    height: auto;
+}
+
+.mapBtn{
+    margin-left: 20%;
+    width: 40%;
+    height: auto;
+}
+
+.weBtn{
+    margin-left: 20%;
+    width: 40%;
+    height: auto;
+}
+
+.hisBtn{
+    margin-left: 20%;
+    width: 50%;
+    height: auto;
+}
+
+.logBtn{
+    margin-left: 20%;
+    width: 50%;
+    height: auto;
+}
+
+.instructionContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.insScroll{
+    width: 100%;
+    height: 100%;
+    margin-top: 0%;
+    margin-left: 0%;
+    overflow-y: scroll;
+}
+
+.imgScroll{
+    margin-top: 18%;
+    width: 100%;
+    height: auto;
+}
+
+.bottomTab{
+    position: fixed;
+    background-color:#266983;
+    bottom: 0%;
+    padding-bottom: 0%;
+    width: 100%;
+}
+
+.insTitle{
+    width: 50%;
+    height: auto;
+    margin: 2%;
+}
+
+.backArrow{
+    width: 10%;
+    margin-left: 30%;
+    margin-bottom: 3%;
+}
+
+.weatherContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.weTitle{
+    width: 30%;
+    height: auto;
+    margin: 2%;
+}
+
+.weBackArrow{
+    width: 10%;
+    margin-left: 50%;
+    margin-bottom: 4%;
+}
+
+.bottomBar{
+    position: fixed;
+    background-color:#F3B82D;
+    bottom: 10%;
+    width: 100%;
+    height: 5%;
+}
+
+.weScroll{
+    margin-top: 18%;
+    width: 100%;
+    height: auto;
+}
+
+.mapContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.mapTitle{
+    width: 35%;
+    height: auto;
+    margin: 2%;
+}
+
+.mapBackArrow{
+    width: 10%;
+    margin-left: 45%;
+    margin-bottom: 2%;
+}
+
+.bottomBarMap{
+    position: fixed;
+    background-color:#F3B82D;
+    bottom: 8%;
+    width: 100%;
+    height: 5%;
+}
+
+.mapScroll{
+    width: 100%;
+    height: auto;
+}
+
+.postContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.topnavPost {
+    position: fixed;
+    overflow: hidden;
+    background-color:#266983;
+    padding: 10px;
+}
+
+.backPostArr{
+    margin-left: 23%;
+    margin-bottom: 2%;
+    width: 12%;
+    height: auto;
+}
+
+.scrollPost{
+    width: 100%;
+    height: auto;
+}
+
+.postTitle{
+    width: 55%;
+    margin-top: 25%;
+    margin-left: 22%;
+}
+
+.postImg{
+    margin-top: 3%;
+    width: 100%;
+    height: auto;
+}
+
+.typeTitle{
+    width: 55%;
+    margin-top: 7%;
+    margin-left: 22%;
+}
+
+.typeBtn{
+    width: 30%;
+    height: auto;
+    margin: 2%;
+}
+
+.container{
+    margin-left: 25%;
+    margin-top: 2%;
+}
+
+.separator{
+    margin-top: 8%;
+    margin-left: 15%;
+    width: 70%;
+    height: auto;
+}
+
+.idTitle{
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 5%;
+}
+
+.idLogo{
+    width: 25%;
+    margin-top: 7%;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+.idInput{
+    font-size: 30px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid black;
+}
+
+.separator2{
+    margin-top: 8%;
+    margin-left: 15%;
+    width: 70%;
+    height: auto;
+}
+
+.gpsTitle{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 5%;
+}
+
+.gpsLogo{
+    width: 15%;
+    margin-top: 7%;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+.commentTitle{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 5%;
+}
+
+.commentLogo{
+    width: 15%;
+    margin-top: 7%;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+.sendBtn{
+    width: 40%;
+    margin-top: 10%;
+    margin-left: 60%;
+}
+
+.feedScroll{
+    width: 100%;
+    height: auto;
+}
