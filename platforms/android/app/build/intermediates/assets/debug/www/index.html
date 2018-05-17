@@ -59,27 +59,58 @@
        <a id="loginBtn" onclick="loginSection()">
             <img src="img/mainScreen/loginBtn.png" class="btnMain2">
        </a>
+       <a onclick="loginFacebook()"><img src="img/mainScreen/fbBtn.png" class="fbBtn"></a>
+
     </div>
 
     <div id="regForm" class="reg regContainer">
         <img src="img/mainScreen/logoMain.png" class="logoMainReg">
-        <img src="img/regScreen/form.png" class="form">
-        <img src="img/regScreen/form.png" class="form">
-        <img src="img/regScreen/form.png" class="form">
+        <div class="formContainer">
+            <img src="img/regScreen/form.png" class="form">
+            <div class="inputCont">
+                <input type="text" src="img/form.png" class="inputRegister" placeholder="Correo" id="mail_reg">
+            </div>
+        </div>
+
+        <div class="formContainer">
+            <img src="img/regScreen/form.png" class="form">
+            <div class="inputCont">
+                <input type="password" src="img/form.png" class="inputRegister" placeholder="Contraseña" id="pass_reg">
+            </div>
+        </div>
+
+        <div class="formContainer">
+            <img src="img/regScreen/form.png" class="form">
+            <div class="inputCont">
+                <input type="password" src="img/form.png" class="inputRegister" placeholder="Confirmar contraseña" id="passr_reg">
+            </div>
+        </div>
+              
         <div class="termsCond">
             <input type="checkbox" name="check" class="check">
             <a onclick="terms()">Términos y condiciones</a>
         </div>
-        <a id="loginBtn" onclick="">
+        <a id="loginBtn" onclick="register()">
             <img src="img/regScreen/regBtn.png" class="btnRegScreen">
         </a>
     </div>
 
     <div id="logForm" class="login loginContainer">
         <img src="img/mainScreen/logoMain.png" class="logoMainReg">
-        <img src="img/regScreen/form.png" class="form">
-        <img src="img/regScreen/form.png" class="form">
-        <a id="loginBtn" onclick="homeSection()">
+        <div class="formContainer">
+            <img src="img/regScreen/form.png" class="form">
+            <div class="inputCont">
+                <input type="text" src="img/form.png" class="inputRegister" placeholder="Correo" id="mail_login">
+            </div>
+        </div>
+        
+        <div class="formContainer">
+            <img src="img/regScreen/form.png" class="form">
+            <div class="inputCont">
+                <input type="password" src="img/form.png" class="inputRegister" placeholder="Contraseña" id="pass_login">
+            </div>
+        </div>
+        <a id="loginBtn" onclick="login()">
             <img src="img/loginScreen/loginBtn.png" class="btnLogScreen">
         </a>
     </div>
@@ -209,7 +240,7 @@
         </div>
 
         <div class="op5">
-            <a><img src="img/optionsScreen/logBtn.png" class="logBtn"></a>
+            <a onclick="logout()"><img src="img/optionsScreen/logBtn.png" class="logBtn"></a>
         </div>
     </div>
 
@@ -317,7 +348,7 @@
 
             <div class="idContainer">
                 <img src="img/postScreen/gpsLogo.png" class="gpsLogo">
-                <input type="text" class="idInput" placeholder="Ingresa la ubicación">
+                <input type="text" class="idInput" id="direction" placeholder="Ingresa la ubicación">
             </div>
             <img src="img/postScreen/separator.png" class="separator">
             <img src="img/postScreen/commentTitle.png" class="commentTitle">
@@ -354,8 +385,9 @@
         </div>
     </div>
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuJuIc-HOLgisMpqSlJiuc-TW3jQXWA84"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/hide.js"></script>
 </body>
 </html>

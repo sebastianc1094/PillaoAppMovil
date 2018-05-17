@@ -1,10 +1,12 @@
 var postImg = document.getElementById('postImg');
 var direction = document.getElementById('direction');
 
-var name = (new Date()).getTime();
+// var name = new Date();
 var geocoder = new google.maps.Geocoder;
 var actualPosition={};
 var imagesRef;
+// var name;
+
 
 //INICIALIZACIÓN DE FIREBASE
  //var config = {
@@ -15,7 +17,6 @@ var imagesRef;
      //storageBucket: "loginwebfirebase.appspot.com",
      //messagingSenderId: "246625453677"
  //};
-firebase.initializeApp(config);
 var config = {
     apiKey: "AIzaSyCXQsWFsLxiBTLGXLV1AefFbNhCjO2v-vU",
     authDomain: "prueba-764cb.firebaseapp.com",
@@ -25,11 +26,13 @@ var config = {
     messagingSenderId: "704673374693"
 };
 ///////////////////////////////////////////////////////////////////
+firebase.initializeApp(config);
 
 //FUNCIONES PARA PUBLICAR DENUNCIA
 window.onload = inicializar;
 function inicializar(){  
     imagesRef = firebase.database().ref().child('images/');
+    // name = firebase.database().ref('images/').push().key;
     showImages();
 }
 function setOptions(srcType) {
@@ -66,7 +69,6 @@ function openCamera(type) {
         displayImage(imageUri);
         getDirection();
         postSection();    
-        // uploadImage(imageUri);
     }, function cameraError(error) {
         console.debug("Unable to obtain picture: " + error, "app");
 
@@ -124,7 +126,7 @@ function uploadImage(){
     // var uploadTask = storageRef.child('img/' + base64Image).put(base64Image);
     // var elem = document.getElementById('imageFile');
     // elem.src = img;
-    firebase.database().ref('images/').child(name).set({ img: postImg.src });
+    firebase.database().ref('images/').child(new Date().getTime()).set({ img: postImg.src });
     // console.log(posicionActual);
 }
 

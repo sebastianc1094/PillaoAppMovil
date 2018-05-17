@@ -7,14 +7,14 @@ var actualPosition={};
 var imagesRef;
 
 //INICIALIZACIÓN DE FIREBASE
-// var config = {
-//     apiKey: "AIzaSyD5J7qz77-xxQ4i1eh1F_FEbYNzYl-R64M",
-//     authDomain: "loginwebfirebase.firebaseapp.com",
-//     databaseURL: "https://loginwebfirebase.firebaseio.com",
-//     projectId: "loginwebfirebase",
-//     storageBucket: "loginwebfirebase.appspot.com",
-//     messagingSenderId: "246625453677"
-// };
+ //var config = {
+   //  apiKey: "AIzaSyD5J7qz77-xxQ4i1eh1F_FEbYNzYl-R64M",
+     //authDomain: "loginwebfirebase.firebaseapp.com",
+     //databaseURL: "https://loginwebfirebase.firebaseio.com",
+     //projectId: "loginwebfirebase",
+     //storageBucket: "loginwebfirebase.appspot.com",
+     //messagingSenderId: "246625453677"
+ //};
 var config = {
     apiKey: "AIzaSyCXQsWFsLxiBTLGXLV1AefFbNhCjO2v-vU",
     authDomain: "prueba-764cb.firebaseapp.com",
@@ -22,13 +22,13 @@ var config = {
     projectId: "prueba-764cb",
     storageBucket: "prueba-764cb.appspot.com",
     messagingSenderId: "704673374693"
-  };
+};
+///////////////////////////////////////////////////////////////////
+firebase.initializeApp(config);
 
 //FUNCIONES PARA PUBLICAR DENUNCIA
 window.onload = inicializar;
-function inicializar(){
-
-    firebase.initializeApp(config);
+function inicializar(){  
     imagesRef = firebase.database().ref().child('images/');
     showImages();
 }
@@ -43,8 +43,7 @@ function setOptions(srcType) {
         mediaType: Camera.MediaType.PICTURE,
         allowEdit: false,
         destinationType: navigator.camera.DestinationType.DATA_URL,
-        // destinationType: navigator.camera.DestinationType.FILE_URI,
-        
+        // destinationType: navigator.camera.DestinationType.FILE_URI,      
         correctOrientation: true  //Corrects Android orientation quirks
     }
     return options;
@@ -80,6 +79,7 @@ function displayImage(imgUri) {
         
 }
 
+//FUNCIÓN DE GEOLOCALIZACIÓN
 function getDirection(){
 
     if (navigator.geolocation) {
@@ -111,23 +111,23 @@ function getDirection(){
         });        
     }
     else {
-              
+          
+        
         //   handleLocationError(false, infoWindow, map.getCenter());
         // handleLocationError(alert('error de geolocalizacion, intente mas tarde'));     
     }
 }
+//////////////////////////////////////////////////////////////////////////////////
+
 
 function uploadImage(){
-
-
     // var uploadTask = storageRef.child('img/' + base64Image).put(base64Image);
-
     // var elem = document.getElementById('imageFile');
     // elem.src = img;
     firebase.database().ref('images/').child(name).set({ img: postImg.src });
     // console.log(posicionActual);
-
 }
+
 function showImages(){
     imagesRef.on("value", function(snapshot){
         var data = snapshot.val();
@@ -140,6 +140,108 @@ function showImages(){
         document.getElementById('feedScroll').innerHTML = result;
     });
 }
+
+//LÓGICA DE AUTENTICACIÓN
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        // User is signed in.
+        document.getElementById("home").style.display = "block";
+        document.getElementById("logForm").style.display = "none";
+
+    } else {
+        // No user is signed in.
+        document.getElementById("home").style.display = "none";
+        document.getElementById("init").style.display = "block";
+    }
+});
+
+function login() {
+    var userEmail = document.getElementById("mail_login").value;
+    var userPass = document.getElementById("pass_login").value;
+
+    if (userEmail.length < 4) {
+        alert('Por favor ingrese un correo válido');
+        return;
+    }
+
+    if (userPass.length < 4) {
+        alert('Por favor ingrese una contraseña de más de 4 caracteres');
+        return;
+    }
+
+    firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+
+        if (errorCode == 'auth/wrong-password') {
+            alert('Contraseña errónea');
+        }
+        if (errorCode == 'auth/user-not-found') {
+            alert('Correo erróneo');
+        }
+    });
+}
+
+function register(){
+    var userEmail = document.getElementById("mail_reg").value;
+    var userPass = document.getElementById("pass_reg").value;
+    var repPass = document.getElementById("passr_reg").value;
+
+    if (userEmail.length < 4) {
+        alert('Por favor ingrese un correo válido');
+        return;
+    }
+
+    if (userPass.length < 4) {
+        alert('Por favor ingrese una contraseña de más de 4 caracteres');
+        return;
+    }
+
+    if(userPass === repPass){
+        firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error){
+            var errorCode = error.code;
+            var errorMessage = error.message;
+
+            if (errorCode == 'auth/weak-password') {
+                alert('La contraseña es débil');
+            } else {
+                alert(errorMessage);
+            }
+        });
+    }else{
+        alert('Las contraseñas no coinciden');
+    }
+}
+
+function loginFacebook(){
+    var provider = new firebase.auth.FacebookAuthProvider();
+    provider.addScope('public_profile');
+
+    firebase.auth().signInWithPopup(provider).then(function (result) {
+        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        // ...
+    }).catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+    });
+}
+
+function logout() {
+    firebase.auth().signOut();
+    document.getElementById("options").style.display = "none";
+    document.getElementById("logForm").style.display = "block";
+}
+
 
 //LÓGICA DE LOS CONTENEDORES DEL INDEX PARA MOSTRAR/OCULTAR
 function help(){

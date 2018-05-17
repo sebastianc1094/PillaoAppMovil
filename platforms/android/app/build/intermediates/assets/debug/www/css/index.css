@@ -128,7 +128,7 @@ body{
 }
 
 .btnMain2{
-    margin-top: 20%;
+    margin-top: 7%;
     width: 80%;
     height: auto;
 }
@@ -157,7 +157,7 @@ body{
 }
 
 .form{
-    margin-top: 10%;
+    margin-top: 7%;
     width: 70%;
     height: auto;
 }
@@ -564,4 +564,28 @@ input[type=checkbox] {
 .feedScroll{
     width: 100%;
     height: auto;
+}
+
+.formContainer{
+    position: relative;
+}
+
+.inputCont{
+    position: absolute;
+    left: 15%;
+    bottom: 30%;
+}
+
+.inputRegister{
+    font-size: 30px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid black;
+}
+
+.fbBtn{
+    width: 75%;
+    margin-left: 12.5%;
+    margin-top: 5%;
 }
