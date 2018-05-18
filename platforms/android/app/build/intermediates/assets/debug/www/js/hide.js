@@ -22,6 +22,7 @@ var map = document.getElementById("map");
 var feed = document.getElementById("feed");
 var we = document.getElementById("weather");
 var camNav = document.getElementById("camNav");
+var topNav = document.getElementById("topNav");
 
 // var name;
 
@@ -177,6 +178,8 @@ firebase.auth().onAuthStateChanged(function (user) {
         initSections();
         camNav.style.display="none";
         homeSec.style.display = "block";
+        topNav.style.display = "block";
+
 
         // document.getElementById("home").style.display = "block";
         // document.getElementById("logForm").style.display = "none";
@@ -274,8 +277,13 @@ function loginFacebook(){
 
 function logout() {
     firebase.auth().signOut();
-    document.getElementById("options").style.display = "none";
-    document.getElementById("logForm").style.display = "block";
+
+    initSections();
+    logForm.style.display="block";
+    
+
+    // document.getElementById("options").style.display = "none";
+    // document.getElementById("logForm").style.display = "block";
 }
 
 
@@ -296,7 +304,8 @@ function initSections(){
     map.style.display = "none";
     feed.style.display = "none";
     we.style.display = "none";
-    camNav.style = "none";
+    camNav.style.display = "none";
+    topNav.style.display = "none";
 }
 
 // function 
@@ -362,7 +371,7 @@ function optionScreen(){
         feed.style.display = "none";
         we.style.display = "none";
         options.style.display= "none";
-        camNav.style = "none";
+        camNav.style.display = "none";
         homeSec.style.display= "block";
     }
 
