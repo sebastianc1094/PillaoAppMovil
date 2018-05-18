@@ -205,11 +205,21 @@
         </div>
     </div>
 
+<!-- ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+
+<div>
+    <div class="topnav">
+        <a onclick="optionScreen()"><img src="img/menuBtn.png" class="menuBtnNav"></a>
+        <img src="img/mainScreen/logoMain.png" class="logoNav">
+        <a onclick="openCamera('CAMERA')"><img src="img/homeScreen/camBtn.png" id="camNav" class="opBtnNav"></a>
+
+    </div>
+
     <div id="home" class="home homeContainer">
-        <div class="topnav">
+        <!-- <div class="topnav">
             <a onclick="optionScreen()"><img src="img/menuBtn.png" class="menuBtnNav"></a>
             <img src="img/mainScreen/logoMain.png" class="logoNav">
-        </div>
+        </div> -->
         <div class="btns">
                 <a onclick="openCamera('CAMERA')"><img src="img/homeScreen/camBtn.png" class="camBtn"></a>      
                 <a onclick="openCamera('PHOTOLIBRARY')" ><img src="img/homeScreen/galleryBtn.png" class="galBtn"></a>          
@@ -217,11 +227,11 @@
     </div>
 
     <div id="options" class="option optionsContainer">
-        <div class="topnavOp">
-            <a onclick="homeSection3()"><img src="img/menuBtn.png" class="menuBtnNav"></a>
+        <!-- <div class="topnavOp">
+            <a onclick="optionScreen()"><img src="img/menuBtn.png" class="menuBtnNav"></a>
             <img src="img/mainScreen/logoMain.png" class="logoNav">
             <a onclick="postSection3()"><img src="img/homeScreen/camBtn.png" class="opBtnNav"></a>
-        </div>
+        </div> -->
 
         <div class="op1">
             <a onclick="instructionSection()"><img src="img/optionsScreen/insBtn.png" class="insBtn"></a>
@@ -245,7 +255,7 @@
     </div>
 
     <div id="instruction" class="instruc instructionContainer">
-        <div class="topnavIns">
+        <!-- <div class="topnavIns">
             <a onclick="homeSection2()">
                 <img src="img/menuBtn.png" class="menuBtnNav">
             </a>
@@ -253,18 +263,18 @@
             <a onclick="postSection2()">
                 <img src="img/homeScreen/camBtn.png" class="opBtnNav">
             </a>
-        </div>
+        </div> -->
         <div class="insScroll">
             <img src="img/instrucScreen/instruction.png" class="imgScroll">
         </div>
         <div class="bottomTab">
             <img src="img/instrucScreen/insTitle.png" class="insTitle">
-            <a onclick="optionScreen2()"><img src="img/instrucScreen/backArrow.png" class="backArrow"></a>
+            <a onclick="backOptionScreen()"><img src="img/instrucScreen/backArrow.png" class="backArrow"></a>
         </div>
     </div>
 
     <div id="weather" class="weather weatherContainer">
-        <div class="topnavIns">
+        <!-- <div class="topnavIns">
             <a onclick="weatherSection2()">
                 <img src="img/menuBtn.png" class="menuBtnNav">
             </a>
@@ -272,7 +282,7 @@
             <a onclick="weatherSection3()">
                 <img src="img/homeScreen/camBtn.png" class="opBtnNav">
             </a>
-        </div>
+        </div> -->
 
         <div class="insScroll">
             <img src="img/weatherScreen/wePaper.png" class="weScroll">
@@ -284,12 +294,12 @@
 
         <div class="bottomTab">
             <img src="img/weatherScreen/weTitle.png" class="weTitle">
-            <a onclick="weatherSection3()"><img src="img/instrucScreen/backArrow.png" class="weBackArrow"></a>
+            <a onclick="backOptionScreen()"><img src="img/instrucScreen/backArrow.png" class="weBackArrow"></a>
         </div>
     </div>
 
     <div id="map" class="map mapContainer">
-        <div class="topnavIns">
+        <!-- <div class="topnavIns">
             <a onclick="homeSection5()">
                 <img src="img/menuBtn.png" class="menuBtnNav">
             </a>
@@ -297,7 +307,7 @@
             <a onclick="postSection4()">
                 <img src="img/homeScreen/camBtn.png" class="opBtnNav">
             </a>
-        </div>
+        </div> -->
 
         <div class="mapScroll">
             <img src="img/mapScreen/mapPaper.png" class="weScroll">
@@ -309,12 +319,12 @@
 
         <div class="bottomTab">
             <img src="img/mapScreen/mapTitle.png" class="mapTitle">
-            <a onclick="optionScreen4()"><img src="img/instrucScreen/backArrow.png" class="mapBackArrow"></a>
+            <a onclick="backOptionScreen()"><img src="img/instrucScreen/backArrow.png" class="mapBackArrow"></a>
         </div>
     </div>
 
     <div id="mainPost" class="post postContainer">
-        <div class="topnavPost">
+        <!-- <div class="topnavPost">
             <a onclick="optionScreen3()">
                 <img src="img/menuBtn.png" class="menuBtnNav">
             </a>
@@ -322,7 +332,7 @@
             <a onclick="homeSection4()">
                 <img src="img/instrucScreen/backArrow.png" class="backPostArr">
             </a>
-        </div>
+        </div> -->
 
         <div class="scrollPost">
             <img src="img/postScreen/postTitle.png" class="postTitle">
@@ -363,7 +373,7 @@
     </div>
 
     <div id="feed" class="feed feedContainer">
-        <div class="topnavIns">
+        <!-- <div class="topnavIns">
             <a onclick="homeSection6()">
                 <img src="img/menuBtn.png" class="menuBtnNav">
             </a>
@@ -371,7 +381,7 @@
             <a onclick="postSection5()">
                 <img src="img/homeScreen/camBtn.png" class="opBtnNav">
             </a>
-        </div>
+        </div> -->
 
         <div class="feedScroll" id="feedScroll">
 
@@ -379,13 +389,15 @@
 
         <div class="bottomTab">
             <img src="img/feedSection/feedTitle.png" class="mapTitle">
-            <a onclick="optionScreen5()">
+            <a onclick="backOptionScreen()">
                 <img src="img/instrucScreen/backArrow.png" class="mapBackArrow">
             </a>
         </div>
     </div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuJuIc-HOLgisMpqSlJiuc-TW3jQXWA84"></script>
+</div>
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuJuIc-HOLgisMpqSlJiuc-TW3jQXWA84"></script> -->
     <script type="text/javascript" src="cordova.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
     <script type="text/javascript" src="js/hide.js"></script>

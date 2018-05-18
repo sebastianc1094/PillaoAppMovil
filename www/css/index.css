@@ -199,6 +199,7 @@ input[type=checkbox] {
   overflow: hidden;
   background-color:#266983;
   padding: 10px;
+  width: 100%;
 }
 
 .logoNav{
@@ -237,6 +238,8 @@ input[type=checkbox] {
     height: 100%;
     background-size: cover;
     background-image: url(../img/homeScreen/homeBack.png);
+    top: 0px;
+    z-index: -1;
 }
 
 .btns{
@@ -352,7 +355,7 @@ input[type=checkbox] {
 }
 
 .imgScroll{
-    margin-top: 18%;
+    /* margin-top: 18%; */
     width: 100%;
     height: auto;
 }
@@ -404,7 +407,7 @@ input[type=checkbox] {
 }
 
 .weScroll{
-    margin-top: 18%;
+    /* margin-top: 18%; */
     width: 100%;
     height: auto;
 }
