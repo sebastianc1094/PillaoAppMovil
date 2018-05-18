@@ -171,7 +171,7 @@ body{
 
 .btnLogScreen{
     margin-top: 15%;
-    margin-left: 35%;
+    margin-left: 30%;
     width: 70%;
     height: auto;
 }
@@ -248,8 +248,10 @@ input[type=checkbox] {
 
 .btns{
     flex-direction: row;
-    margin-top: 112%;
+    /* margin-top: 112%; */
     margin-left: 32%;
+    position: absolute;
+    bottom: 6%;
 }
 
 .camBtn{
@@ -310,7 +312,7 @@ input[type=checkbox] {
 }
 
 .opBtnNav{
-    margin-left: 20%;
+    margin-left: 18%;
     width: 15%;
     height: auto;
 }
@@ -572,6 +574,7 @@ input[type=checkbox] {
 .feedScroll{
     width: 100%;
     height: auto;
+    position: absolute;
 }
 
 .formContainer{
