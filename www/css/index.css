@@ -196,10 +196,14 @@ input[type=checkbox] {
 }
 
 .topnav {
-  overflow: hidden;
+  /* overflow: hidden; */
+  position: fixed;
   background-color:#266983;
   padding: 10px;
   width: 100%;
+  z-index: 1;
+  
+
 }
 
 .logoNav{
@@ -302,6 +306,7 @@ input[type=checkbox] {
     position: absolute;
     width: 100%;
     height: 100%;
+    top: 12%;
 }
 
 .opBtnNav{
@@ -355,7 +360,7 @@ input[type=checkbox] {
 }
 
 .imgScroll{
-    /* margin-top: 18%; */
+    margin-top: 17%;
     width: 100%;
     height: auto;
 }
