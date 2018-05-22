@@ -264,10 +264,9 @@ input[type=checkbox] {
 
 .btns{
     flex-direction: row;
-    /* margin-top: 112%; */
     margin-left: 32%;
     position: absolute;
-    bottom: 6%;
+    bottom: 2%;
 }
 
 .camBtn{
