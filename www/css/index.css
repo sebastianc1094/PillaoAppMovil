@@ -107,16 +107,15 @@ body{
 }
 
 .help1c{
-    margin-left: 31%;
+    margin-left: 31.5%;
     margin-top: 10%;
-    width: 38%;
+    width: 37%;
     height: auto;
 }
 
 .btnNext{
     position: center;
-    margin-top: 6%;
-    margin-left: 70%;
+    margin-left: 75%;
     width: 15%;
     height: auto;
 }
@@ -615,5 +614,11 @@ input[type=checkbox] {
 .fbBtn{
     width: 75%;
     margin-left: 12.5%;
+    margin-top: 5%;
+}
+
+.skipBtn{
+    width: 10%;
+    margin-left: 80%;
     margin-top: 5%;
 }
