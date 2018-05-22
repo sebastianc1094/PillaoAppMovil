@@ -11,6 +11,10 @@ body{
     display: none;
 }
 
+.topnav{
+    display: none;    
+}
+
 .reg{
     display: none;
 }
