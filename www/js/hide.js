@@ -355,6 +355,13 @@ function regScreen() {
    
 }
 
+function skip(){
+    helpSection1.style.display = "none";
+    helpSection2.style.display = "none";
+    helpSection3.style.display = "none";
+    mainMen.style.display = "block";
+}
+
 function optionScreen(){
 
     if(homeSec.style.display == "block"){
