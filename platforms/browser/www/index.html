@@ -24,6 +24,9 @@
     </div>
 
     <div id="helpSection1" class="help helpContainer">
+        <a onclick="skip()">
+            <img src="img/helpScreen/skipBtn.png" class="skipBtn">
+        </a>
         <img src="img/helpScreen/help1.png" class="help1" />
         <img src="img/helpScreen/help1a.png" class="help1a" />
         <div>
@@ -33,8 +36,11 @@
         </div>
     </div>
     <div id="helpSection2" class="help helpContainer">
+        <a onclick="skip()">
+            <img src="img/helpScreen/skipBtn.png" class="skipBtn">
+        </a>
         <img src="img/helpScreen/help2.png" class="help1" />
-        <img src="img/helpScreen/help2a.png" class="help1a" />
+        <img src="img/helpScreen/help2a.png" class="help1b" />
         <div>
             <a id="btnNext" onclick="page3()">
                 <img src="img/helpScreen/checkBtn.png" class="btnNext" />
@@ -42,8 +48,11 @@
         </div>
     </div>
     <div id="helpSection3" class="help helpContainer">
+        <a onclick="skip()">
+            <img src="img/helpScreen/skipBtn.png" class="skipBtn">
+        </a>
         <img src="img/helpScreen/help3.png" class="help1" />
-        <img src="img/helpScreen/help3a.png" class="help1a" />
+        <img src="img/helpScreen/help3a.png" class="help1c" />
         <div>
             <a id="btnNext" onclick="mainSection()">
                 <img src="img/helpScreen/checkBtn.png" class="btnNext" />
@@ -59,7 +68,7 @@
        <a id="loginBtn" onclick="loginSection()">
             <img src="img/mainScreen/loginBtn.png" class="btnMain2">
        </a>
-       <a onclick="loginFacebook()"><img src="img/mainScreen/fbBtn.png" class="fbBtn"></a>
+       <a><img src="img/mainScreen/fbBtn.png" class="fbBtn"></a>
 
     </div>
 
@@ -205,21 +214,18 @@
         </div>
     </div>
 
-<!-- ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+
 
 <div>
     <div class="topnav" id="topNav">
-        <a onclick="optionScreen()"><img src="img/menuBtn.png" class="menuBtnNav"></a>
-        <img src="img/mainScreen/logoMain.png" class="logoNav">
+        <a onclick="backOptionScreen()"><img src="img/menuBtn.png" class="menuBtnNav"></a>
+        <img src="img/mainScreen/logoMain.png" class="logoNav" onclick="optionScreen()">
         <a onclick="openCamera('CAMERA')"><img src="img/homeScreen/camBtn.png" id="camNav" class="opBtnNav"></a>
 
     </div>
 
     <div id="home" class="home homeContainer">
-        <!-- <div class="topnav">
-            <a onclick="optionScreen()"><img src="img/menuBtn.png" class="menuBtnNav"></a>
-            <img src="img/mainScreen/logoMain.png" class="logoNav">
-        </div> -->
+       
         <div class="btns">
                 <a onclick="openCamera('CAMERA')"><img src="img/homeScreen/camBtn.png" class="camBtn"></a>      
                 <a onclick="openCamera('PHOTOLIBRARY')" ><img src="img/homeScreen/galleryBtn.png" class="galBtn"></a>          
@@ -227,11 +233,7 @@
     </div>
 
     <div id="options" class="option optionsContainer">
-        <!-- <div class="topnavOp">
-            <a onclick="optionScreen()"><img src="img/menuBtn.png" class="menuBtnNav"></a>
-            <img src="img/mainScreen/logoMain.png" class="logoNav">
-            <a onclick="postSection3()"><img src="img/homeScreen/camBtn.png" class="opBtnNav"></a>
-        </div> -->
+       
 
         <div class="op1">
             <a onclick="instructionSection()"><img src="img/optionsScreen/insBtn.png" class="insBtn"></a>
@@ -255,15 +257,7 @@
     </div>
 
     <div id="instruction" class="instruc instructionContainer">
-        <!-- <div class="topnavIns">
-            <a onclick="homeSection2()">
-                <img src="img/menuBtn.png" class="menuBtnNav">
-            </a>
-            <img src="img/mainScreen/logoMain.png" class="logoNav">
-            <a onclick="postSection2()">
-                <img src="img/homeScreen/camBtn.png" class="opBtnNav">
-            </a>
-        </div> -->
+       
         <div class="">
             <img src="img/instrucScreen/instruction.png" class="imgScroll">
         </div>
@@ -274,16 +268,7 @@
     </div>
 
     <div id="weather" class="weather weatherContainer">
-        <!-- <div class="topnavIns">
-            <a onclick="weatherSection2()">
-                <img src="img/menuBtn.png" class="menuBtnNav">
-            </a>
-            <img src="img/mainScreen/logoMain.png" class="logoNav">
-            <a onclick="weatherSection3()">
-                <img src="img/homeScreen/camBtn.png" class="opBtnNav">
-            </a>
-        </div> -->
-
+       
         <div class="insScroll">
             <img src="img/weatherScreen/wePaper.png" class="weScroll">
         </div>
@@ -299,22 +284,13 @@
     </div>
 
     <div id="map" class="map mapContainer">
-        <!-- <div class="topnavIns">
-            <a onclick="homeSection5()">
-                <img src="img/menuBtn.png" class="menuBtnNav">
-            </a>
-            <img src="img/mainScreen/logoMain.png" class="logoNav">
-            <a onclick="postSection4()">
-                <img src="img/homeScreen/camBtn.png" class="opBtnNav">
-            </a>
-        </div> -->
-
+   
         <div class="mapScroll">
             <img src="img/mapScreen/mapPaper.png" class="weScroll">
         </div>
 
         <div class="bottomBarMap">
-            <a>¡Mira aquí el mapa!</a>
+            <a href="https://siata.gov.co/siata_nuevo/">¡Mira aquí el mapa!</a>
         </div>
 
         <div class="bottomTab">
@@ -324,16 +300,7 @@
     </div>
 
     <div id="mainPost" class="post postContainer">
-        <!-- <div class="topnavPost">
-            <a onclick="optionScreen3()">
-                <img src="img/menuBtn.png" class="menuBtnNav">
-            </a>
-            <img src="img/mainScreen/logoMain.png" class="logoNav">
-            <a onclick="homeSection4()">
-                <img src="img/instrucScreen/backArrow.png" class="backPostArr">
-            </a>
-        </div> -->
-
+       
         <div class="scrollPost">
             <img src="img/postScreen/postTitle.png" class="postTitle">
             <img src="img/postScreen/demoImg.png" class="postImg" id="postImg">
@@ -373,15 +340,7 @@
     </div>
 
     <div id="feed" class="feed feedContainer">
-        <!-- <div class="topnavIns">
-            <a onclick="homeSection6()">
-                <img src="img/menuBtn.png" class="menuBtnNav">
-            </a>
-            <img src="img/mainScreen/logoMain.png" class="logoNav">
-            <a onclick="postSection5()">
-                <img src="img/homeScreen/camBtn.png" class="opBtnNav">
-            </a>
-        </div> -->
+       
 
         <div class="feedScroll" id="feedScroll">
 

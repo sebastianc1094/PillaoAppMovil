@@ -5,6 +5,7 @@ var direction = document.getElementById('direction');
 // var geocoder = new google.maps.Geocoder;
 var actualPosition={};
 var imagesRef;
+var transition= false;
 
 var init = document.getElementById("init");
 var helpSection1 = document.getElementById("helpSection1");
@@ -90,7 +91,7 @@ function openCamera(type) {
     navigator.camera.getPicture(function cameraSuccess(imageUri) {
 
         displayImage(imageUri);
-        getDirection();
+        // getDirection();
         postSection();    
     }, function cameraError(error) {
         console.debug("Unable to obtain picture: " + error, "app");
@@ -364,23 +365,20 @@ function skip(){
 
 function optionScreen(){
 
-    if(homeSec.style.display == "block"){
+    // if(homeSec.style.display == "block"){
 
-        homeSec.style.display= "none";
-        camNav.style = "block";
-        options.style.display= "block";
+    //     homeSec.style.display= "none";
+    //     camNav.style = "block";
+    //     options.style.display= "block";
 
-    }
+    // }
 
-    else{
-        instruction.style.display = "none";
-        map.style.display = "none";
-        feed.style.display = "none";
-        we.style.display = "none";
-        options.style.display= "none";
-        camNav.style.display = "none";
+    // else{
+        transition= false; 
+        initSections();
+        topNav.style.display="block";
         homeSec.style.display= "block";
-    }
+    // }
 
 }
 
@@ -414,17 +412,42 @@ function feedSection(){
 
 function backOptionScreen(){
 
-    instruction.style.display = "none";
-    map.style.display = "none";
-    feed.style.display = "none";
-    we.style.display = "none";
-    options.style.display= "block";
+    if(transition == true){
+
+        initSections();
+        topNav.style.display = "block";
+        mainPost.style.display = "block";
+        transition= false; 
+    }
+    else if(homeSec.style.display == "block"){
+
+        homeSec.style.display= "none";
+        camNav.style = "block";
+        options.style.display= "block";
+
+    }
+    else if(mainPost.style.display == "block"){
+
+        mainPost.style.display = "none";
+        options.style.display= "block";
+
+        transition= true;
+    }
+
+    else{
+        instruction.style.display = "none";
+        map.style.display = "none";
+        feed.style.display = "none";
+        we.style.display = "none";
+        options.style.display= "block";
+    }
 
 }
 
 function postSection() {
 
-    homeSec.style.display= "none";
+    initSections();
+    topNav.style.display="block";
     mainPost.style.display="block";
 
 }

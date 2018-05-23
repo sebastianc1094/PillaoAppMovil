@@ -1,11 +1,17 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "pillao",
-  "short_name": "pillao",
+  "name": "Pilla'o",
+  "short_name": "Pilla'o",
   "version": "co.edu.upb.proyecto.pillao",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "author": "Apache Cordova Team",
-  "icons": [],
+  "icons": [
+    {
+      "src": "res/icon/icon-96-xhdpi.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    }
+  ],
   "start_url": "index.html"
 }
