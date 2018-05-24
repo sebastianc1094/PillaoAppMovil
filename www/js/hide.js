@@ -451,3 +451,19 @@ function postSection() {
     mainPost.style.display="block";
 
 }
+
+function backMenu(){
+
+    if(regForm.style.display=="block"){
+
+        regForm.style.display ="none";
+        mainMen.style.display= "block";
+
+    }
+    else{
+        logForm.style.display ="none";
+        mainMen.style.display= "block";
+    }
+    
+    
+}

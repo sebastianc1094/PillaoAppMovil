@@ -453,7 +453,12 @@ input[type=checkbox] {
     margin-left: 45%;
     margin-bottom: 2%;
 }
-
+.backInit{
+    width: 10%;
+    margin-left: 6%;
+    bottom: 3%;
+    position: absolute;
+}
 .bottomBarMap{
     position: fixed;
     background-color:#F3B82D;
