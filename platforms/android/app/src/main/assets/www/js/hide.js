@@ -5,6 +5,7 @@ var direction = document.getElementById('direction');
 // var geocoder = new google.maps.Geocoder;
 var actualPosition={};
 var imagesRef;
+var transition= false;
 
 var init = document.getElementById("init");
 var helpSection1 = document.getElementById("helpSection1");
@@ -24,6 +25,12 @@ var we = document.getElementById("weather");
 var camNav = document.getElementById("camNav");
 var topNav = document.getElementById("topNav");
 
+var bike = document.getElementById("bike");
+var car = document.getElementById("car");
+var truck = document.getElementById("truck");
+var bus = document.getElementById("bus");
+
+var typeVehicle=0;
 // var name;
 
 
@@ -373,12 +380,9 @@ function optionScreen(){
     // }
 
     // else{
-        instruction.style.display = "none";
-        map.style.display = "none";
-        feed.style.display = "none";
-        we.style.display = "none";
-        options.style.display= "none";
-        camNav.style.display = "none";
+        transition= false; 
+        initSections();
+        topNav.style.display="block";
         homeSec.style.display= "block";
     // }
 
@@ -414,13 +418,26 @@ function feedSection(){
 
 function backOptionScreen(){
 
-    
-    if(homeSec.style.display == "block"){
+    if(transition == true){
+
+        initSections();
+        topNav.style.display = "block";
+        mainPost.style.display = "block";
+        transition= false; 
+    }
+    else if(homeSec.style.display == "block"){
 
         homeSec.style.display= "none";
         camNav.style = "block";
         options.style.display= "block";
 
+    }
+    else if(mainPost.style.display == "block"){
+
+        mainPost.style.display = "none";
+        options.style.display= "block";
+
+        transition= true;
     }
 
     else{
@@ -436,6 +453,53 @@ function backOptionScreen(){
 function postSection() {
 
     initSections();
+    topNav.style.display="block";
     mainPost.style.display="block";
 
+}
+
+function backMenu(){
+
+    if(regForm.style.display=="block"){
+
+        regForm.style.display ="none";
+        mainMen.style.display= "block";
+
+    }
+    else{
+        logForm.style.display ="none";
+        mainMen.style.display= "block";
+    }
+    
+    
+}
+
+function showTerms(){
+    regForm.style.display ="none";
+    terms.style.display = "block";
+}
+
+function showTerms(){
+    regForm.style.display ="none";
+    terms.style.display = "block";
+}
+
+function backReg(){
+    terms.style.display ="none";
+    regForm.style.display = "block";
+}
+
+function resetVehicle(){
+    bike.style.opacity = 0.5;
+    car.style.opacity = 0.5;
+    truck.style.opacity = 0.5;
+    bus.style.opacity = 0.5;
+
+}
+
+function selectVehicle(vehiculo,value){
+    resetVehicle();
+    vehiculo.style.opacity = 1;
+    typeVehicle=value;
+    
 }

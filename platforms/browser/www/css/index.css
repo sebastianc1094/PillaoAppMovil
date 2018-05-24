@@ -554,14 +554,14 @@ input[type=checkbox] {
 }
 
 .idLogo{
-    width: 25%;
+    width: 20%;
     margin-top: 7%;
     margin-left: 10%;
     margin-right: 5%;
 }
 
 .idInput{
-    font-size: 30px;
+    font-size: 20px;
     border: 0;
     outline: 0;
     background: transparent;
