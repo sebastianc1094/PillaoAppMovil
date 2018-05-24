@@ -25,6 +25,12 @@ var we = document.getElementById("weather");
 var camNav = document.getElementById("camNav");
 var topNav = document.getElementById("topNav");
 
+var bike = document.getElementById("bike");
+var car = document.getElementById("car");
+var truck = document.getElementById("truck");
+var bus = document.getElementById("bus");
+
+var typeVehicle=0;
 // var name;
 
 
@@ -481,4 +487,19 @@ function showTerms(){
 function backReg(){
     terms.style.display ="none";
     regForm.style.display = "block";
+}
+
+function resetVehicle(){
+    bike.style.opacity = 0.5;
+    car.style.opacity = 0.5;
+    truck.style.opacity = 0.5;
+    bus.style.opacity = 0.5;
+
+}
+
+function selectVehicle(vehiculo,value){
+    resetVehicle();
+    vehiculo.style.opacity = 1;
+    typeVehicle=value;
+    
 }

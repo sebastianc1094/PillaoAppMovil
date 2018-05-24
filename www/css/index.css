@@ -459,6 +459,18 @@ input[type=checkbox] {
     bottom: 3%;
     position: absolute;
 }
+#bike{
+    opacity: 0.5;
+}
+#car{
+    opacity: 0.5;
+}
+#truck{
+    opacity: 0.5;
+}
+#bus{
+    opacity: 0.5;
+}
 .bottomBarMap{
     position: fixed;
     background-color:#F3B82D;
