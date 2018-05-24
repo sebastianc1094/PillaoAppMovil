@@ -467,3 +467,18 @@ function backMenu(){
     
     
 }
+
+function showTerms(){
+    regForm.style.display ="none";
+    terms.style.display = "block";
+}
+
+function showTerms(){
+    regForm.style.display ="none";
+    terms.style.display = "block";
+}
+
+function backReg(){
+    terms.style.display ="none";
+    regForm.style.display = "block";
+}
