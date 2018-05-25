@@ -30,6 +30,17 @@ var car = document.getElementById("car");
 var truck = document.getElementById("truck");
 var bus = document.getElementById("bus");
 
+var userEmail = document.getElementById("mail_login");
+var userPass = document.getElementById("pass_login");
+
+var regUserEmail = document.getElementById("mail_reg");
+var regUserPass = document.getElementById("pass_reg");
+var repPass = document.getElementById("passr_reg");
+
+var plate = document.getElementById("plate");
+var address = document.getElementById("address");
+var comment = document.getElementById("comment");
+
 var typeVehicle=0;
 // var name;
 
@@ -156,7 +167,13 @@ function uploadImage(){
     // var uploadTask = storageRef.child('img/' + base64Image).put(base64Image);
     // var elem = document.getElementById('imageFile');
     // elem.src = img;
-    firebase.database().ref('images/').child(new Date().getTime()).set({ img: postImg.src });
+    firebase.database().ref('images/').child(new Date().getTime()).set({
+        img: postImg.src,
+        vehicle: typeVehicle,
+        placa: plate.value,
+        address: address.value,
+        comment: comment.value 
+    });
     alert('enviado');
 
     mainPost.style.display="none";
@@ -202,9 +219,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 });
 
 function login() {
-    var userEmail = document.getElementById("mail_login").value;
-    var userPass = document.getElementById("pass_login").value;
-
+     
     if (userEmail.length < 4) {
         alert('Por favor ingrese un correo válido');
         return;
@@ -215,7 +230,7 @@ function login() {
         return;
     }
 
-    firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function (error) {
+    firebase.auth().signInWithEmailAndPassword(userEmail.value, userPass.value).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -230,22 +245,19 @@ function login() {
 }
 
 function register(){
-    var userEmail = document.getElementById("mail_reg").value;
-    var userPass = document.getElementById("pass_reg").value;
-    var repPass = document.getElementById("passr_reg").value;
-
-    if (userEmail.length < 4) {
+    
+    if (regUserEmail.length < 4) {
         alert('Por favor ingrese un correo válido');
         return;
     }
 
-    if (userPass.length < 4) {
+    if (regUserPass.length < 4) {
         alert('Por favor ingrese una contraseña de más de 4 caracteres');
         return;
     }
 
-    if(userPass === repPass){
-        firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error){
+    if(regUserPass === repPass){
+        firebase.auth().createUserWithEmailAndPassword(regUserEmail.value, regUserPass.value).catch(function(error){
             var errorCode = error.code;
             var errorMessage = error.message;
 

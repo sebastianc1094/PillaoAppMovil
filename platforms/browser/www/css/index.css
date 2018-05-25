@@ -566,6 +566,7 @@ input[type=checkbox] {
     outline: 0;
     background: transparent;
     border-bottom: 2px solid black;
+    width: 50%;
 }
 
 .separator2{
