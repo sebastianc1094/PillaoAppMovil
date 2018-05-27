@@ -518,7 +518,6 @@ input[type=checkbox] {
 }
 
 .postImg{
-    margin-top: 3%;
     width: 100%;
     height: auto;
 }
@@ -609,6 +608,7 @@ input[type=checkbox] {
 }
 
 .feedScroll{
+    margin-top: 17%; 
     width: 100%;
     height: auto;
     position: absolute;
@@ -643,3 +643,48 @@ input[type=checkbox] {
     margin-left: 80%;
     margin-top: 5%;
 }
+
+.divTitle{
+    margin-top: 5%;
+    background: #F5C796;
+    width: 100%; 
+    height: 5%;
+}
+
+.placaSize{
+    font-size: 25px;
+    margin-left: 5%;
+}
+
+.pinIconSize{
+    width: 8%;
+    margin-left: 7%;
+    margin-top: 2%;
+}
+
+.adrText{
+    font-size: 24px;
+    margin-left: 3%;
+    font-style: normal;
+}
+
+.textIconSize{
+    width: 12%;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+
+.sep{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.textComment{
+    font-size: 18px;
+}
+
+.comContainer{
+    width: 80%;
+    margin-left: 10%;
+}
+

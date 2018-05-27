@@ -46,22 +46,22 @@ var typeVehicle=0;
 
 
 //INICIALIZACIÓN DE FIREBASE
- //var config = {
-   //  apiKey: "AIzaSyD5J7qz77-xxQ4i1eh1F_FEbYNzYl-R64M",
-     //authDomain: "loginwebfirebase.firebaseapp.com",
-     //databaseURL: "https://loginwebfirebase.firebaseio.com",
-     //projectId: "loginwebfirebase",
-     //storageBucket: "loginwebfirebase.appspot.com",
-     //messagingSenderId: "246625453677"
- //};
-var config = {
-    apiKey: "AIzaSyCXQsWFsLxiBTLGXLV1AefFbNhCjO2v-vU",
-    authDomain: "prueba-764cb.firebaseapp.com",
-    databaseURL: "https://prueba-764cb.firebaseio.com",
-    projectId: "prueba-764cb",
-    storageBucket: "prueba-764cb.appspot.com",
-    messagingSenderId: "704673374693"
-};
+ var config = {
+     apiKey: "AIzaSyD5J7qz77-xxQ4i1eh1F_FEbYNzYl-R64M",
+     authDomain: "loginwebfirebase.firebaseapp.com",
+     databaseURL: "https://loginwebfirebase.firebaseio.com",
+     projectId: "loginwebfirebase",
+     storageBucket: "loginwebfirebase.appspot.com",
+     messagingSenderId: "246625453677"
+ };
+//var config = {
+    //apiKey: "AIzaSyCXQsWFsLxiBTLGXLV1AefFbNhCjO2v-vU",
+    //authDomain: "prueba-764cb.firebaseapp.com",
+    //databaseURL: "https://prueba-764cb.firebaseio.com",
+    //projectId: "prueba-764cb",
+    //storageBucket: "prueba-764cb.appspot.com",
+    //messagingSenderId: "704673374693"
+//};
 ///////////////////////////////////////////////////////////////////
 firebase.initializeApp(config);
 
@@ -167,7 +167,13 @@ function uploadImage(){
     // var uploadTask = storageRef.child('img/' + base64Image).put(base64Image);
     // var elem = document.getElementById('imageFile');
     // elem.src = img;
-    firebase.database().ref('images/').child(new Date().getTime()).set({ img: postImg.src,vehicle: typeVehicle,placa: plate.value,address: address.value,comment: comment.value });
+    firebase.database().ref('images/').child(new Date().getTime()).set({
+        img: postImg.src,
+        vehicle: typeVehicle,
+        placa: plate.value,
+        address: address.value,
+        comment: comment.value 
+    });
     alert('enviado');
 
     mainPost.style.display="none";
@@ -182,7 +188,7 @@ function showImages(){
         var num = "";
         for(var key in data){
             // console.log( data[key]);
-            result += '<img class="postImg" src="' + data[key].img + '"/>';  
+            result += '<div class="divTitle"><img src = "img/postScreen/gpsLogo.png" class="pinIconSize"/><i class="adrText">' + data[key].address + '</i></div><img class="postImg" src="' + data[key].img + '"/><div class="divComment"><img <img src = "img/postScreen/commentLogo.png" class="textIconSize"/><i class="placaSize">Placa: ' + data[key].placa + '</i></div><div class="comContainer"><p class="textComment">' + data[key].comment +'</p></div><img src = "img/separator.png" class="sep"/>';  
         }
         document.getElementById('feedScroll').innerHTML = result;
     });

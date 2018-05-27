@@ -8,12 +8,12 @@
         "source": "C:\\Users\\JulianAndresSucerqui\\Documents\\GitHub\\PillaoAppMovil\\platforms\\android\\app\\src\\main\\res\\drawable-land-mdpi\\screen.png"
     },
     {
-        "merged": "E:\\PillaoAppMovil-master\\Pillao\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-xxxhdpi_screen.png.flat",
-        "source": "E:\\PillaoAppMovil-master\\Pillao\\platforms\\android\\app\\src\\main\\res\\drawable-land-xxxhdpi\\screen.png"
-    },
-    {
         "merged": "E:\\Universidad\\APPSMOVILES\\Pillao\\App\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_icon.png.flat",
         "source": "E:\\Universidad\\APPSMOVILES\\Pillao\\App\\platforms\\android\\app\\src\\main\\res\\mipmap-mdpi\\icon.png"
+    },
+    {
+        "merged": "E:\\PillaoAppMovil-master\\Pillao\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-xxxhdpi_screen.png.flat",
+        "source": "E:\\PillaoAppMovil-master\\Pillao\\platforms\\android\\app\\src\\main\\res\\drawable-land-xxxhdpi\\screen.png"
     },
     {
         "merged": "C:\\Users\\JulianAndresSucerqui\\Documents\\GitHub\\PillaoAppMovil\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-hdpi_screen.png.flat",
@@ -40,12 +40,12 @@
         "source": "E:\\Universidad\\APPSMOVILES\\Pillao\\App\\platforms\\android\\app\\src\\main\\res\\drawable-port-xxhdpi\\screen.png"
     },
     {
-        "merged": "E:\\PillaoAppMovil-master\\Pillao\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-xhdpi_screen.png.flat",
-        "source": "E:\\PillaoAppMovil-master\\Pillao\\platforms\\android\\app\\src\\main\\res\\drawable-land-xhdpi\\screen.png"
-    },
-    {
         "merged": "E:\\Universidad\\APPSMOVILES\\Pillao\\App\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_icon.png.flat",
         "source": "E:\\Universidad\\APPSMOVILES\\Pillao\\App\\platforms\\android\\app\\src\\main\\res\\mipmap-hdpi\\icon.png"
+    },
+    {
+        "merged": "E:\\PillaoAppMovil-master\\Pillao\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-xhdpi_screen.png.flat",
+        "source": "E:\\PillaoAppMovil-master\\Pillao\\platforms\\android\\app\\src\\main\\res\\drawable-land-xhdpi\\screen.png"
     },
     {
         "merged": "E:\\Universidad\\APPSMOVILES\\Pillao\\App\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-xhdpi_screen.png.flat",
