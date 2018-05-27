@@ -47,7 +47,7 @@ var typeVehicle=0;
 
 //INICIALIZACIÓN DE FIREBASE
  //var config = {
-   //  apiKey: "AIzaSyD5J7qz77-xxQ4i1eh1F_FEbYNzYl-R64M",
+     //apiKey: "AIzaSyD5J7qz77-xxQ4i1eh1F_FEbYNzYl-R64M",
      //authDomain: "loginwebfirebase.firebaseapp.com",
      //databaseURL: "https://loginwebfirebase.firebaseio.com",
      //projectId: "loginwebfirebase",
@@ -188,7 +188,7 @@ function showImages(){
         var num = "";
         for(var key in data){
             // console.log( data[key]);
-            result += '<img class="postImg" src="' + data[key].img + '"/>';  
+            result += '<div class="divTitle"><img src = "img/postScreen/gpsLogo.png" class="pinIconSize"/><i class="adrText">' + data[key].address + '</i></div><img class="postImg" src="' + data[key].img + '"/><div class="divComment"><img <img src = "img/postScreen/commentLogo.png" class="textIconSize"/><i class="placaSize">Placa: ' + data[key].placa + '</i></div><div class="comContainer"><p class="textComment">' + data[key].comment +'</p></div><img src = "img/separator.png" class="sep"/>';  
         }
         document.getElementById('feedScroll').innerHTML = result;
     });
@@ -256,7 +256,7 @@ function register(){
         return;
     }
 
-    if(regUserPass === repPass){
+    if(regUserPass.value === repPass.value){
         firebase.auth().createUserWithEmailAndPassword(regUserEmail.value, regUserPass.value).catch(function(error){
             var errorCode = error.code;
             var errorMessage = error.message;

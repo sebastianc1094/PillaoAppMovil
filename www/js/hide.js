@@ -188,7 +188,7 @@ function showImages(){
         var num = "";
         for(var key in data){
             // console.log( data[key]);
-            result += '<div class="divTitle"><img src = "img/postScreen/gpsLogo.png" class="pinIconSize"/><i class="adrText">' + data[key].address + '</i></div><img class="postImg" src="' + data[key].img + '"/><div class="divComment"><img <img src = "img/postScreen/commentLogo.png" class="textIconSize"/><i class="placaSize">Placa: ' + data[key].placa + '</i></div><div class="comContainer"><p class="textComment">' + data[key].comment +'</p></div><img src = "img/separator.png" class="sep"/>';  
+            result += '<div class="divTitle"><img src = "img/postScreen/gpsLogo.png" class="pinIconSize"/><i class="adrText">' + data[key].address + '</i></div><img class="postImg" src="' + data[key].img + '"/><div class="divComment"><img <img src = "img/postScreen/commentLogo.png" class="textIconSize"/><i class="placaSize">Placa: ' + data[key].placa + '</i></div><div class="comContainer"><textarea disabled="disabled" rows="4" class="textComment">' + data[key].comment +'</textarea></div><img src = "img/separator.png" class="sep"/>';  
         }
         document.getElementById('feedScroll').innerHTML = result;
     });
@@ -256,7 +256,7 @@ function register(){
         return;
     }
 
-    if(regUserPass === repPass){
+    if(regUserPass.value === repPass.value){
         firebase.auth().createUserWithEmailAndPassword(regUserEmail.value, regUserPass.value).catch(function(error){
             var errorCode = error.code;
             var errorMessage = error.message;
