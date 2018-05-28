@@ -41,6 +41,10 @@ var plate = document.getElementById("plate");
 var address = document.getElementById("address");
 var comment = document.getElementById("comment");
 
+var loading = document.getElementById("loading");
+var error = document.getElementById("error");
+var send = document.getElementById("send");
+
 var typeVehicle=0;
 // var name;
 
@@ -174,11 +178,31 @@ function uploadImage(){
         address: address.value,
         comment: comment.value 
     });
-    alert('enviado');
+    
+    alert("¡Denuncia enviada!");
+    // successWait();
+    // loading.style.display="block";
+    // setTimeout(function(){},2000);
+    // loading.style.display="none";
+    // send.style.display="block";
+    // setTimeout(function(){},2000);
+    // send.style.display="none";
+
 
     mainPost.style.display="none";
     homeSec.style.display="block";
+
+    clear();
+
     // console.log(posicionActual);
+}
+
+function clear(){
+  
+    address.value="";
+    plate.value="";
+    comment.value="";
+
 }
 
 function showImages(){

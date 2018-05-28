@@ -18,9 +18,9 @@
 <body>
     <div id="init" class="initContainer">
         <img src="./img/initScreen/logo.png" class="logoContainer" />
-        <a id="btnInit" onclick="help()">
+        <!-- <a id="btnInit" onclick="help()">
             <img src="img/initScreen/initBtn.png" class="btnInit"/>
-        </a>
+        </a> -->
     </div>
 
     <div id="helpSection1" class="help helpContainer">
@@ -348,8 +348,18 @@
 
             <a><img src="img/postScreen/postBtn.png" onclick="uploadImage()" class="sendBtn"></a>
         </div>
+        <div >
+            <img class="popUp" src="img/popUpScreen/cargando.png" id="loading">
+        </div>
+        <div >
+            <img class="popUp" src="img/popUpScreen/error.png" id="error" >
+        </div>
+        <div >
+            <img class="popUp" src="img/popUpScreen/enviado.png" id="send">
+        </div>
     </div>
 
+    
     <div id="feed" class="feed feedContainer">
        
 
@@ -364,6 +374,8 @@
             </a>
         </div>
     </div>
+    
+
 
 </div>
 

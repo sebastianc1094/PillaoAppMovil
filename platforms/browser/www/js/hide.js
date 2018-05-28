@@ -41,6 +41,10 @@ var plate = document.getElementById("plate");
 var address = document.getElementById("address");
 var comment = document.getElementById("comment");
 
+var loading = document.getElementById("loading");
+var error = document.getElementById("error");
+var send = document.getElementById("send");
+
 var typeVehicle=0;
 // var name;
 
@@ -167,6 +171,7 @@ function uploadImage(){
     // var uploadTask = storageRef.child('img/' + base64Image).put(base64Image);
     // var elem = document.getElementById('imageFile');
     // elem.src = img;
+    homeSec.style.display="block";
     firebase.database().ref('images/').child(new Date().getTime()).set({
         img: postImg.src,
         vehicle: typeVehicle,
@@ -174,12 +179,31 @@ function uploadImage(){
         address: address.value,
         comment: comment.value 
     });
-    alert('enviado');
+    
+    successWait();
+    // loading.style.display="block";
+    // setTimeout(function(){},2000);
+    // loading.style.display="none";
+    // send.style.display="block";
+    // setTimeout(function(){},2000);
+    // send.style.display="none";
+
 
     mainPost.style.display="none";
     homeSec.style.display="block";
     // console.log(posicionActual);
 }
+
+// function successWait(){
+//     loading.style.display="block"
+//     setTimeout(function(){alert("lol")},2000);
+//     loading.style.display="none";
+//     send.style.display="block";
+//     setTimeout(function(){},2000);
+//     send.style.display="none";
+
+
+// }
 
 function showImages(){
     imagesRef.on("value", function(snapshot){
@@ -188,7 +212,7 @@ function showImages(){
         var num = "";
         for(var key in data){
             // console.log( data[key]);
-            result += '<div class="divTitle"><img src = "img/postScreen/gpsLogo.png" class="pinIconSize"/><i class="adrText">' + data[key].address + '</i></div><img class="postImg" src="' + data[key].img + '"/><div class="divComment"><img <img src = "img/postScreen/commentLogo.png" class="textIconSize"/><i class="placaSize">Placa: ' + data[key].placa + '</i></div><div class="comContainer"><p class="textComment">' + data[key].comment +'</p></div><img src = "img/separator.png" class="sep"/>';  
+            result += '<div class="divTitle"><img src = "img/postScreen/gpsLogo.png" class="pinIconSize"/><i class="adrText">' + data[key].address + '</i></div><img class="postImg" src="' + data[key].img + '"/><div class="divComment"><img <img src = "img/postScreen/commentLogo.png" class="textIconSize"/><i class="placaSize">Placa: ' + data[key].placa + '</i></div><div class="comContainer"><textarea disabled="disabled" rows="4" class="textComment">' + data[key].comment +'</textarea></div><img src = "img/separator.png" class="sep"/>';  
         }
         document.getElementById('feedScroll').innerHTML = result;
     });
@@ -211,7 +235,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     } else {
         // No user is signed in.
         initSections();
-        init.style.display = "block";
+        helpSection1.style.display = "block";
 
         // document.getElementById("home").style.display = "none";
         // document.getElementById("init").style.display = "block";
